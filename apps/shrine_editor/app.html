@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--
+            @copyright 2018 - Max Bebök
+            @author Max Bebök
+            @license GNU-GPLv3 - see the "LICENSE" file in the root directory
+        -->
+
+        <title>Ice-Spear - Shrine Editor</title>
+
+        <link rel="stylesheet" href="./app.css" />
+
+        <base href="./../../" >
+
+        <script src="apps/globals.js"></script>
+
+        <link rel="stylesheet" href="css/photon.dark.css" data-theme="href" />
+        <link rel="stylesheet" href="css/theme.dark.css" data-theme="href" />
+
+        <link rel="stylesheet" href="node_modules/izitoast/dist/css/iziToast.min.css" />
+
+        <link rel="stylesheet" href="css/loader.css">
+        <link rel="stylesheet" href="css/split.css" />
+        <link rel="stylesheet" href="css/style.css" />
+
+        <!-- THREE.js helper stuff -->
+        <script src="lib/3d_renderer/lib/shaders/CopyShader.js"></script>
+
+        <script src="lib/3d_renderer/lib/postprocessing/EffectComposer.js"></script>
+        <script src="lib/3d_renderer/lib/postprocessing/RenderPass.js"></script>
+        <script src="lib/3d_renderer/lib/postprocessing/ShaderPass.js"></script>
+        <script src="lib/3d_renderer/lib/postprocessing/MaskPass.js"></script>
+
+        <script src="lib/3d_renderer/lib/postprocessing/SAOPass.js"></script>
+        <script src="lib/3d_renderer/lib/shaders/SAOShader.js"></script>
+        <script src="lib/3d_renderer/lib/shaders/DepthLimitedBlurShader.js"></script>
+        <script src="lib/3d_renderer/lib/shaders/UnpackDepthRGBAShader.js"></script>
+        <script src="lib/3d_renderer/lib/shaders/FXAAShader.js"></script>
+
+        <script src="lib/3d_renderer/lib/libs/stats.min.js"></script>
+
+    </head>
+    <body>
+
+        <div id="loader-container" hidden>
+            <div id="loader"></div>
+            <span class="data-status"></span>
+            <span class="data-info"></span>
+        </div>
+
+        <div class="window">
+
+        <header class="toolbar toolbar-header">
+
+          <div class="toolbar-actions">
+            <div class="btn-group">
+              <button onclick="mainApp.save();" class="btn btn-default" title="Save">
+                <span class="icon icon-floppy"></span>
+              </button>
+            </div>
+
+            <div class="btn-group">
+              <button onclick="mainApp.setTheme(this, 'light');" class="btn btn-default btn-theme" title="Theme: Light">
+                <span class="icon icon-light-up"></span>
+              </button>
+              <button onclick="mainApp.setTheme(this, 'dark');" class="btn btn-default btn-theme active" title="Theme: Dark">
+                <span class="icon icon-moon"></span>
+              </button>
+            </div>
+
+            <div class="btn-group ui-history-controls">
+            </div>
+
+            <div class="btn-group">
+                <button class="btn btn-default data-tool-openActorSearch">
+                    <span class="icon icon-search"></span>
+                </button>
+            </div>
+
+            <div class="btn-group" style="position: absolute; right: 80px;">
+              <button onclick="mainApp.openCredits();" class="btn btn-default btn-theme active" title="Credits" style="width: 80px;">
+                <span class="icon icon-info-circled"> Credits</span>
+              </button>
+            </div>
+
+            <div class="btn-group" style="position: absolute; right: 0px;">
+              <button class="btn btn-default" onclick="mainApp.toggleFullscreen()" title="Fullscreen">
+                <span class="icon icon-popup"></span>
+              </button>
+              <button class="btn btn-default" onclick="mainApp.exit()" title="Exit">
+                <span class="icon icon-cancel-squared"></span>
+              </button>
+            </div>
+
+          </div>
+        </header>
+
+        <div class="window-content">
+            <div class="pane-group">
+
+                <div class="pane-sm sidebar" id="main-sidebar-1">
+                  
+                    <h5 class="nav-group-title">Shrine</h5>
+
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td>Name</td>
+                                <td class="data-shrine-name">-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h5 class="nav-group-title">Actors</h5>
+
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td>Static</td>
+                                <td class="data-actors-staticCount">-</td>
+                            </tr>
+                            <tr>
+                                <td>Dynamic</td>
+                                <td class="data-actors-dynamicCount">-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h5 class="nav-group-title">Build-Tools</h5>
+
+                    <nav class="nav-group tool-group">
+                        <span class="nav-group-item">
+                            <button class="btn btn btn-default data-tool-save">Save</button>
+                        </span>
+                        <span class="nav-group-item">
+                            <button class="btn btn btn-default data-tool-saveBuild">Save &amp; Build</button>
+                        </span>
+                        <span class="nav-group-item">
+                            <button class="btn btn btn-default data-tool-openBuildDir">Open Build Folder</button>
+                        </span>
+                    </nav>
+
+                    <h5 class="nav-group-title">Actor-Tools</h5>
+
+                    <nav class="nav-group tool-group">
+                        <!-- >span class="nav-group-item">
+                            <button class="btn btn btn-default data-tool-openLogicEditor">Logic-Viewer [WIP]</button>
+                        </span-->
+                        <span class="nav-group-item">
+                            <button class="btn btn btn-default data-tool-addActorStatic">Add Actor (Static)</button>
+                        </span>
+                        <span class="nav-group-item">
+                            <button class="btn btn btn-default data-tool-addActorDyn">Add Actor (Dynamic)</button>
+                        </span>
+                    </nav>
+
+                    <h5 class="nav-group-title">Actor-Templates</h5>
+
+                    <nav class="nav-group tool-group"></nav>
+                        <span class="nav-group-item">
+                            <select class="btn btn btn-default data-tool-actorTemplate">
+                            </select>
+                        </span>
+                        <span class="nav-group-item">
+                            <button class="btn btn btn-default data-tool-addActorTemplate">Add</button>
+                        </span>
+                    </nav>
+
+                    <h5 class="nav-group-title">Render-Settings</h5>
+                        
+                    <nav class="nav-group tool-group" id="renderSettings-container">
+                    </nav>
+
+                </div>
+
+                <div class="pane" id="main-sidebar-2">
+                    <canvas class="shrine-canvas" tabindex="1">Oops! here should be something nice in 3D</canvas>
+                </div>
+
+                <div class="pane-sm sidebar" id="main-sidebar-3" style="max-width: none;">
+                    <h5 class="nav-group-title">Selected Actors</h5>
+
+                    <ul class="list-group container-selectedActors">
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <footer id="footer" class="toolbar toolbar-footer">
+            <h1 class="title data-footer"></h1>
+        </footer>
+
+        <div class="window-container"></div>
+
+        </div>
+    </body>
+</html>

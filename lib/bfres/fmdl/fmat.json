@@ -1,0 +1,85 @@
+{
+    "magic" : {"type" : "string", "length": 4, "checkValue": "FMAT"},
+    "nameOffset" : {"type" : "s32", "addValue": "@offset"},
+    "flags" : {"type" : "u32"},
+
+    "sectionIndex" : {"type" : "u16"},
+
+    "renderInfoParamCount" : {"type": "u16"},
+    "textureRefCount"      : {"type": "u8"},
+    "textureSamplerCount"  : {"type": "u8"},
+    "materialParamCount"   : {"type": "u16"},
+    "volatalieParamCount"  : {"type": "u16"},
+
+    "materialParamLength" : {"type": "u16"},
+    "rawParamLength"      : {"type": "u16"},
+    "userDataEntryCount"  : {"type": "u16"},
+
+    "renderInfoParamOffset" : {"type": "s32", "addValue": "@offset"},
+    "renderStateOffset"     : {"type": "s32", "addValue": "@offset"},
+    "shaderAssignOffset"    : {"type": "s32", "addValue": "@offset"},
+
+    "textureRefOffset"      : {"type": "s32", "addValue": "@offset"},
+    "textureSamplerOffset"  : {"type": "s32", "addValue": "@offset"},
+    "textureSamplerIndexOffset"  : {"type": "s32", "addValue": "@offset"},
+
+    "materialParamArrayOffset" : {"type": "s32", "addValue": "@offset"},
+    "materialParamIndexOffset" : {"type": "s32", "addValue": "@offset"},
+    "materialParamDataOffset"  : {"type": "s32", "addValue": "@offset"},
+
+    "userDataIndexOffset"  : {"type": "s32", "addValue": "@offset"},
+    "volatileFlagsOffset"  : {"type": "s32", "addValue": "@offset"},
+
+    "userPointer"  : {"type": "s32"},
+
+    "nameLength" : {"type": "s32",    "offset": "nameOffset", "addOffset": -4},
+    "name"       : {"type": "string", "offset": "nameOffset", "length": "nameLength"},
+
+    "textureSampler": { "type": "structure", "setOffset": "textureSamplerOffset", "count": "textureSamplerCount",
+        "structure": {
+            "values": {"type": "u32", "count": 3},
+            "handle": {"type": "u32"},
+            "nameOffset" : {"type" : "s32", "addValue": "@offset"},
+            "index": {"type": "u8"},
+            "__PADING__": {"type": "u8", "count": 3}
+        }
+    },
+
+    "textureRef": { "type": "structure", "setOffset": "textureRefOffset", "count": "textureRefCount",
+        "structure": {
+            "nameOffset"  : {"type": "s32", "addValue": "@offset"},
+            "headerOffset": {"type": "s32", "addValue": "@offset"},
+
+            "nameLength" : {"type": "s32",    "offset": "nameOffset", "addOffset": -4},
+            "name"       : {"type": "string", "offset": "nameOffset", "length": "nameLength"}
+        }
+    },
+
+    "renderParamsIndex": { "type": "structure", "setOffset": "renderInfoParamOffset",
+        "structure": {
+            "length" : {"type": "u32"},
+            "entryNum": {"type": "s32", "addValue": 1},
+
+            "entries": { "type": "structure", "count": "entryNum",
+                "structure": "./lib/bfres/index_entry.json"
+            }
+        }
+    },
+
+    "materialParams": { "type": "structure", "setOffset": "materialParamArrayOffset", "count": "materialParamCount",
+        "structure": {
+            "type"   : {"type": "u8"},
+            "size"   : {"type": "u8"},
+            "offset" : {"type": "u16", "comment": "relative to this structure?"},
+
+            "uniformVarOffset" : {"type": "s32", "default": -1},
+            "conversionCbPtr"  : {"type": "u32", "default": 0},
+            "paramIndex"  : {"type": "u16"},
+            "paramIndex2" : {"type": "u16"},
+
+            "nameOffset" : {"type": "s32", "addValue": "@offset"},
+            "nameLength" : {"type": "s32",    "offset": "nameOffset", "addOffset": -4},
+            "name"       : {"type": "string", "offset": "nameOffset", "length": "nameLength"}
+        }
+    }
+}

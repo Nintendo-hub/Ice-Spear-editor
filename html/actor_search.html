@@ -1,0 +1,173 @@
+<div id="searchWindow-actor">
+    <style>
+        #searchWindow-actor
+        {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 600px;
+            height: 500px;
+            resize: both;
+            overflow: auto;
+
+            background-color: #21252b;
+            border: 1px solid black;
+            padding: 5px;
+
+            transition: opacity 0.2s ease-in-out;
+        }
+
+        #searchWindow-actor.isMoving
+        {
+            opacity: 0.7;
+        }
+
+        #searchWindow-actor > div {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+        }
+
+        #searchWindow-actor .search-header {
+            flex-shrink: 0;
+        }
+
+        #searchWindow-actor .search-content {
+            flex-grow: 1;
+            padding: 5px;
+            overflow: auto;
+        }
+
+        #searchWindow-actor .search-footer {
+            flex-shrink: 0;
+        }
+
+        #searchWindow-actor .search-footer > span {
+            float: right;
+        }
+
+        #searchWindow-actor .drag-bar {
+            width: 100%;
+            font-size: 14px;
+            height: 26px;
+            background-color: #353b45;
+            border: 1px solid #000000;
+            cursor: move;
+            color: #c1a888;
+            padding-left: 4px;
+            margin-bottom: 5px;
+        }
+
+        #searchWindow-actor .window-buttons
+        {
+            position: absolute; 
+            right: 5px;
+        }
+
+        #searchWindow-actor .window-buttons button
+        {
+            height: 24px;
+            border-width: 0 1px;
+        }
+
+        #searchWindow-actor h5 {
+            margin-top: 5px;
+        }
+
+        #searchWindow-actor .data-searchValue {
+            width: calc(100% - 60px);
+            margin-bottom: 5px;
+        }
+
+        #searchWindow-actor .data-limit {
+            width: 80px;
+            height: 25px;
+            margin-right: 6px;
+        }
+
+        #searchWindow-actor .btn-group:last-child {
+            float: right;
+        }
+
+        #searchWindow-actor .btn-group button {
+            cursor: pointer;
+        }
+
+        #searchWindow-actor .result-container > div {
+            border: 1px solid black;
+            width: 100%;
+        }
+
+        #searchWindow-actor table tr td {
+            border-color: #282c34;
+            border-width: 1px 0;
+            border-style: solid;
+        }
+
+        #searchWindow-actor table tr:active td,
+        #searchWindow-actor table tr.active td {
+            border-width: 1px 0 1px 0;
+            border-color: #73c990;
+            border-style: solid;
+            color: #73c990;
+        }
+
+        #searchWindow-actor .btn-regex {
+            margin-top: 1px;
+            height: 29px;
+        }
+
+    </style>
+    <div>
+        <div class="search-header">
+            <div class="drag-bar">
+                Actor-Search
+                <div class="btn-group window-buttons">
+                    <button class="btn btn-default data-tool-close" title="Close">
+                        <span class="icon icon-cancel-squared"></span>
+                    </button>
+                </div>
+            </div>
+            <div>
+                <input type="text" class="form-control data-searchValue" placeholder='Search...' />
+                <div class="btn-group">
+                    <button class="btn btn-default btn-regex" data-filter="regex">Regex</button>
+                </div>
+            </div>
+            <div>
+                <div class="btn-group">
+                    <button class="btn btn-default" data-filter="id">ID</button>
+                    <button class="btn btn-default" data-filter="srt">SRT</button>
+                    <button class="btn btn-default active" data-filter="name">Name</button>
+                    <button class="btn btn-default" data-filter="params">Params</button>
+                </div>
+                <div class="btn-group">
+                    <button class="btn btn-default active" data-filter="static">Static</button>
+                    <button class="btn btn-default active" data-filter="dynamic">Dynamic</button>
+                </div>
+            </div>
+        </div>
+        <div class="search-content">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>HashId</th>
+                        <th>SRTHash</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody class="data-resultTable">
+                </tbody>
+            </table>
+        </div>
+        <div class="search-footer">
+            <button class="btn btn btn-default data-tool-selectAll">Select All</button>
+            <span>
+                Limit: <input type="number" class="form-control data-limit" placeholder='∞' value="100" />
+                Actors found: <span class="data-resultCount">0</span>
+            </span>
+        </div>
+    </div>
+</div>

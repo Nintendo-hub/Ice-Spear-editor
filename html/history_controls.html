@@ -1,0 +1,52 @@
+<div class="history-controls">
+
+    <style>
+        .history-controls {
+            border: 1px solid rgba(0, 0, 0, 0.48);
+            border-width: 0 1px;
+            padding: 0 10px;
+        }
+        
+        .history-controls input.slider {
+            vertical-align: middle;   
+        }
+
+        .history-controls .position-container,
+        .history-controls .data-history-memSize {
+            display: inline-block;
+            text-align: right;
+        }
+
+        .history-controls .position-container {
+            min-width: 54px;
+        }
+
+        .history-controls .data-history-memSize {
+            min-width: 70px;
+        }
+    </style>
+
+    <input type="range" min="0" max="0" value="0" class="slider data-history-posSlider">
+
+    <span class="position-container">
+        <span class="data-history-posCurrent">0</span>/
+        <span class="data-history-posTotal">0</span>
+    </span>
+
+    <div class="btn-group">
+        <button class="btn btn-default btn-theme data-history-undo" title="Undo">
+            <span class="icon icon-reply"></span>
+        </button>
+        <button class="btn btn-default btn-theme data-history-redo" title="Redo">
+            <span class="icon icon-forward"></span>
+        </button>
+    </div>
+
+    <div class="btn-group">
+        <button class="btn btn-default btn-theme data-history-clear" title="Clear">
+            <span class="icon icon-trash"></span>
+        </button>
+    </div>
+
+    <span class="data-history-memSize">-</span>
+</div>

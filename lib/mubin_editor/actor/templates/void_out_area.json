@@ -1,0 +1,113 @@
+{
+    "name": "Area - Void-Out",
+    "actors": [
+        {
+            "!Parameters": {
+                "AutoSave": {
+                    "type": 208,
+                    "value": false
+                },
+                "CameraPriority": {
+                    "type": 209,
+                    "value": 1
+                },
+                "CameraSet": {
+                    "type": 160,
+                    "value": "-"
+                },
+                "ForceCalcInEvent": {
+                    "type": 208,
+                    "value": false
+                },
+                "Shape": {
+                    "type": 160,
+                    "value": "Box"
+                }
+            },
+            "HashId": {
+                "type": 211,
+                "value": "{ID0}"
+            },
+            "SRTHash": {
+                "type": 209,
+                "value": -1320211630
+            },
+            "Scale": [
+                {
+                    "type": 210,
+                    "value": 30
+                },
+                {
+                    "type": 210,
+                    "value": 20
+                },
+                {
+                    "type": 210,
+                    "value": 30
+                }
+            ],
+            "Translate": [
+                {
+                    "type": 210,
+                    "value": 0
+                },
+                {
+                    "type": 210,
+                    "value": -20
+                },
+                {
+                    "type": 210,
+                    "value": 0
+                }
+            ],
+            "UnitConfigName": {
+                "type": 160,
+                "value": "Area"
+            }
+        },
+        {
+            "HashId": {
+                "type": 211,
+                "value": "{ID1}"
+            },
+            "LinksToObj": [
+                {
+                    "DefinitionName": {
+                        "type": 160,
+                        "value": "AreaCol"
+                    },
+                    "DestUnitHashId": {
+                        "type": 211,
+                        "value": "{ID0}"
+                    }
+                }
+            ],
+            "OnlyOne": {
+                "type": 208,
+                "value": true
+            },
+            "SRTHash": {
+                "type": 209,
+                "value": 812920316
+            },
+            "Translate": [
+                {
+                    "type": 210,
+                    "value": 0
+                },
+                {
+                    "type": 210,
+                    "value": 1
+                },
+                {
+                    "type": 210,
+                    "value": 0
+                }
+            ],
+            "UnitConfigName": {
+                "type": 160,
+                "value": "BottomTag"
+            }
+        }
+    ]
+}

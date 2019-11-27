@@ -1,0 +1,94 @@
+{
+    "magic" : {"type" : "string", "length": 4, "checkValue": "FSHU"},
+
+    "fileNameOffset" : {"type": "s32", "addValue": "@offset"},
+    "filePathOffset" : {"type": "s32", "addValue": "@offset"},
+
+    "flags"      : {"type": "u32"},
+    "frameCount" : {"type": "s32"},
+
+    "materialAnimCount" : {"type": "u16"},
+    "userDataCount"     : {"type": "u16"},
+    "paramAnimCount"    : {"type": "s32"},
+    "curveCount"        : {"type": "u32"},
+    "bakedLength"       : {"type": "u32"},
+
+    "modelOffset"        : {"type": "s32", "addValue": "@offset"},
+    "bindIndexOffset"    : {"type": "s32", "addValue": "@offset"},
+    "materialAnimOffset" : {"type": "s32", "addValue": "@offset"},
+
+    "userDataOffset" : {"type": "s32", "addValue": "@offset"},
+
+    "fileNameLength" : {"type": "s32",    "offset": "fileNameOffset", "addOffset": -4},
+    "fileName"       : {"type": "string", "offset": "fileNameOffset", "length": "fileNameLength"},
+
+    "filePathLength" : {"type": "s32",    "offset": "filePathOffset", "addOffset": -4},
+    "filePath"       : {"type": "string", "offset": "filePathOffset", "length": "filePathLength"},
+
+
+    "materialAnim": { "type": "structure", "setOffset": "materialAnimOffset", "count": "materialAnimCount",
+        "structure": {
+            "paramAnimCount"    : {"type": "u16"},
+            "curveCount"        : {"type": "u16"},
+            "animConstantCount" : {"type": "u16"},
+
+            "__PADDING__" : {"type": "u8", "count": 2},
+
+            "startCurveIndex"         : {"type": "s32"},
+            "startParamAnimInfoIndex" : {"type": "s32"},
+
+            "animNameOffset"     : {"type": "s32", "addValue": "@offset"},
+            "paramAnimOffset"    : {"type": "s32", "addValue": "@offset"},
+            "curveOffset"        : {"type": "s32", "addValue": "@offset"},
+            "animConstantOffset" : {"type": "s32", "addValue": "@offset"},
+
+            "animNameLength" : {"type": "s32",    "offset": "animNameOffset", "addOffset": -4},
+            "animName"       : {"type": "string", "offset": "animNameOffset", "length": "animNameLength"},
+
+            "paramAnim": { "type": "structure", "setOffset": "paramAnimOffset", "count": "paramAnimCount", "restoreOffset": true,
+                "structure": {
+                    "startCurveIndex"     : {"type": "u16"},
+                    "floatCurveCount"     : {"type": "u16"},
+                    "intCurveCount"       : {"type": "u16"},
+                    "startAnimConstIndex" : {"type": "u16"},
+                    "animConstCount"      : {"type": "u16"},
+                    "subBindIndex"        : {"type": "u16"},
+
+                    "nameOffset"      : {"type": "s32", "addValue": "@offset"},
+
+                    "nameLength" : {"type": "s32",    "offset": "nameOffset", "addOffset": -4},
+                    "name"       : {"type": "string", "offset": "nameOffset", "length": "nameLength"}
+                }
+            },
+
+            "animConstant": { "type": "structure", "setOffset": "animConstantOffset", "count": "animConstantCount", "restoreOffset": true,
+                "structure": {
+                    "targetOffset" : {"type": "u32", "addValue": "@offset"},
+                    "constValue"   : {"type": "float32", "comment": "is u32 OR float32"}
+                }
+            },
+
+            "curves": { "type": "structure", "setOffset": "curveOffset", "count": "curveCount", "restoreOffset": true,
+                "structure": {
+                    "flags"        : {"type": "u16"},
+                    "keyCount"     : {"type": "u16"},
+                    "targetOffset" : {"type": "u32", "addValue": "@offset"},
+
+                    "frameStart"   : {"type": "float32"},
+                    "frameEnd"     : {"type": "float32"},
+                    "dataScale"    : {"type": "float32", "comment": "is u32 OR float32"},
+                    "dataOffset"   : {"type": "float32", "comment": "is u32 OR float32"},
+
+                    "dataDelta" : {"type": "float32"},
+                    "frameArrayOffset" : {"type": "s32", "addValue": "@offset"},
+                    "keyArrayOffset"   : {"type": "s32", "addValue": "@offset"},
+
+                    "frameArray": {"type": "u32", "count": "keyCount", "setOffset": "frameArrayOffset",  "restoreOffset": true},
+                    "keyArray"  : {"type": "u32", "count": "keyCount", "setOffset": "keyArrayOffset",  "restoreOffset": true}
+                }
+            }
+
+
+        }
+    }
+}

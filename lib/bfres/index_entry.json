@@ -1,0 +1,7 @@
+{
+    "searchValue": {"type": "u32"},
+    "leftIndex"  : {"type": "u16"},
+    "rightIndex" : {"type": "u16"},
+    "namePointer": {"type": "s32"},
+    "dataPointer": {"type": "s32", "addValue": "@offset"}
+}

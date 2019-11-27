@@ -1,0 +1,8 @@
+{
+    "nodeOffset": {"value": "@offset"},
+    "id": {"type": "u32", "function": "crc32", "comment": "hash of the name"},
+    "__UNKNOWN_1_": {"type": "u16", "default": 3},
+    "__UNKNOWN_2_": {"type": "u16", "default": 1},
+    "dataOffset": {"type": "u16"},
+    "childCount": {"type": "u16"}
+}

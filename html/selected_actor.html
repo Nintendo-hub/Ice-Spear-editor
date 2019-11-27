@@ -1,0 +1,174 @@
+<li class="list-group-item selected-actor-item">
+    <style>
+        .selected-actor-item .data-actor-type
+        {
+            font-size: 95%;
+            opacity: 0.75;
+        }
+
+        .selected-actor-item table
+        {
+            margin-top: 8px;
+        }
+
+        .selected-actor-item table tr:first-child td
+        {
+            padding-top: 8px;
+        }
+
+        .selected-actor-item table tr:last-child td
+        {
+            padding-bottom: 8px;
+        }
+
+        .selected-actor-item button.btn
+        {
+            min-width: 130px;
+        }
+
+        .selected-actor-item button.btn.btn-img
+        {
+            min-width: 63px;
+            text-align: center;
+            height: 24px;
+        }
+
+        .selected-actor-item button.btn.btn-img img 
+        {
+            height: 16px;
+        }
+
+        .selected-actor-item button.btn.byaml-buttons
+        {
+            min-width: 110px;
+        }
+
+        .selected-actor-item .nav-group-item.param-tools button.btn
+        {
+            min-width: 80px;
+        }
+
+        .selected-actor-item input.form-control 
+        {
+            height: 28px;
+        }
+
+        .selected-actor-item .byaml-editor
+        {
+            height: 300px;
+            margin-top: 6px;
+            border: 1px solid #494a4c;
+        }
+
+        .selected-actor-item .btn.btn-icon
+        {
+            width: 38px;
+            text-align: center;
+            min-width: unset;
+        }
+
+        .selected-actor-item .nav-group-item.param-tools .param-name
+        {
+            color: #cab19e;
+            display: inline-block;
+            width: 60px;
+            vertical-align: middle;
+        }
+
+        .selected-actor-item select
+        {
+            background-color: #1e2425;
+            color: #ececec;
+            padding: 1px;
+            border: 1px solid #616161;
+        }
+    </style>
+    <span>
+        <img class="img __img-circle media-object pull-left actor-model-type" src="assets/img/icons/unknown.png" width="32" height="32">
+        <div class="media-body">
+            <strong class="search-value data-actor-name">????</strong>
+            <p>
+                <select class="data-actor-type">
+                    <option value="Dynamic">Dynamic</option>
+                    <option value="Static">Static</option>
+                </select>
+            </p>
+        </div>
+    </span>
+    <div>
+        <div>
+            <h5 class="nav-group-title">IDs</h5>
+
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td>HashId</td>
+                            <td><input class="form-control data-actor-params-HashId" type="text" /></td>
+                        </tr>
+                        <tr>
+                            <td>SRTHash</td>
+                            <td><input class="form-control data-actor-params-SRTHash" type="text" /></td>
+                        </tr>
+                        <tr>
+                            <td>CRC (MainField)</td>
+                            <td class="data-actor-params-FieldCRC32">0</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            <h5 class="nav-group-title">Actor Tools</h5>
+            
+                <nav class="nav-group tool-group">
+                    
+                    <span class="nav-group-item">
+                        <button class="btn btn-default btn-img data-tool-deselect" title="Deselect Actor">
+                            <img class="img" src="assets/img/icons/select.png">
+                        </button>
+                        <button class="btn btn-default btn-img data-tool-focus" title="Focus Actor">
+                            <img class="img" src="assets/img/icons/video-camera.png">
+                        </button>
+
+                        <button class="btn btn-default btn-img data-tool-copy" title="Duplicate Actor">
+                            <img class="img" src="assets/img/icons/copy.png">
+                        </button>
+                        <button class="btn btn-default btn-img data-tool-delete" title="Delete Actor">
+                            <img class="img" src="assets/img/icons/cancel-button.png">
+                        </button>
+                    </span>
+                    <span class="nav-group-item">
+                        <button class="btn btn-default data-tool-copyJSON">Copy JSON</button>
+                        <button class="btn btn-default data-tool-importJSON">Import JSON</button>
+                    </span>
+                </nav>
+
+            <h5 class="nav-group-title">Parameter Tools</h5>
+
+                <span class="nav-group-item param-tools">
+                    <span class="param-name">Rotation:</span>
+                    <button class="btn btn-default data-tool-addRotScalar">Add (Y)</button>
+                    <button class="btn btn-default data-tool-addRotVector">Add (XYZ)</button>
+                    <button class="btn btn-default data-tool-removeRot">Remove</button>
+                </span>
+
+                <span class="nav-group-item param-tools">
+                    <span class="param-name">Scaling:</span>
+                    <button class="btn btn-default data-tool-addScaleScalar">Add (XZ)</button>
+                    <button class="btn btn-default data-tool-addScaleVector">Add (XYZ)</button>
+                    <button class="btn btn-default data-tool-removeScale">Remove</button>
+                </span>
+
+            <h5 class="nav-group-title">BYAML Editor</h5>
+
+                <span class="nav-group-item">
+                    <button class="btn btn-default btn-icon data-tool-toggleEditor" title="Toggle Editor">
+                        <span class="icon icon-right-open"></span>
+                    </button>
+                    <button class="btn btn-default byaml-buttons data-tool-byamlToActor">Apply</button>
+                    <button class="btn btn-default byaml-buttons data-tool-byamlRefresh">Refresh</button>
+                </span>
+
+                <div class="byaml-editor" hidden></div>
+        </div>
+    </div>
+</li>
+    

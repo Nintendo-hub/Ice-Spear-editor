@@ -1,0 +1,102 @@
+<div id="renderSettings">
+
+    <style>
+        #renderSettings input[type=number]
+        {
+            width: calc(100% - 85px);
+            height: 20px;
+            font-size: 12px;
+            vertical-align: top;
+            border: 1px solid #7b5100;
+            border-radius: 3px;
+            background: none;
+            padding: 0px 3px;
+            color: white;
+            margin-left: 4px;
+            display: inline-block;
+        }
+
+        #renderSettings .nav-group-title
+        {
+            font-size: 11px;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+
+    <h5 class="nav-group-title">Objects</h5>
+
+    <span class="nav-group-item">
+        <label><input type="checkbox" checked class="data-tool-renderer-actorsVisible">
+            <span>Show Visible Actors</span>
+        </label>
+    </span>
+    <span class="nav-group-item">
+        <label><input type="checkbox" checked class="data-tool-renderer-actorsInvisible">
+            <span>Show Invisible Actors</span>
+        </label>
+    </span>
+    <span class="nav-group-item">
+        <label><input type="checkbox" checked class="data-tool-renderer-actorsFarLOD">
+            <span>Show Far-LOD Actors</span>
+        </label>
+    </span>
+    <span class="nav-group-item">
+        <label><input type="checkbox" class="data-tool-renderer-actorLinks">
+            <span>Show Actors Links</span>
+        </label>
+    </span>
+    <span class="nav-group-item">
+        <label><input type="checkbox" checked class="data-tool-renderer-mapModel">
+            <span>Show Map Model</span>
+        </label>
+    </span>
+
+    <h5 class="nav-group-title">Renderer</h5>
+
+    <span class="nav-group-item tooltip">
+        <label><input type="checkbox" class="data-tool-renderer-accurateTimer">
+            <span>Accurate-Timer</span>
+        </label>
+        <span class="tooltiptext">
+            more stable FPS, higher CPU usage<br/>
+            can be better in bigger scenes (field-editor)
+        </span>
+    </span>
+    <span class="nav-group-item tooltip">
+        <label><input type="checkbox" class="data-tool-renderer-postProc">
+            <span>Post-Processing</span>
+        </label>
+        <span class="tooltiptext">
+            Enables SAO, is slower <br/>
+            and doesn't work on actors for now
+        </span>
+    </span>
+    <span class="nav-group-item tooltip">
+        <label><input type="checkbox" checked class="data-tool-renderer-camLight">
+            <span>Camera Light</span>
+        </label>
+        <span class="tooltiptext">
+            Makes use of normal-maps, only works in shrines
+        </span>
+    </span>
+
+    <span class="nav-group-item">
+        <label>
+            <input type="checkbox" class="data-tool-renderer-showStats">
+            <span>Show FPS/ms</span>
+        </label>
+    </span>
+
+    <span class="nav-group-item">
+        <label>Target FPS:</label>
+        
+        <input type="number" value="60" class="data-tool-renderer-targetFPS">
+    </span>
+
+    <span class="nav-group-item">
+        <label>Camera-Speed</label>
+        <br/>
+        <input type="range" min="0.0625" max="4" value="0.125" step="0.0625" class="data-tool-renderer-camSpeed">
+    </span>
+</div>

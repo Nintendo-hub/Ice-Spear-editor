@@ -1,0 +1,466 @@
+{
+   "0": {
+         "name": "GX2_SURFACE_FORMAT_INVALID",
+         "bpp": 0,
+         "bpBlock": 0,
+         "signed": false,
+         "handler": "raw"
+   },
+   "1": {
+         "name": "GX2_SURFACE_FORMAT_TC_R8_UNORM",
+         "bpp": 0,
+         "bpBlock": 0,
+         "signed": false,
+         "handler": "raw"
+   },
+   "2": {
+         "name": "GX2_SURFACE_FORMAT_T_R4_G4_UNORM",
+         "bpp": 0,
+         "bpBlock": 0,
+         "signed": false,
+         "handler": "raw"
+   },
+   "5": {
+         "name": "GX2_SURFACE_FORMAT_TCD_R16_UNORM",
+         "bpp": 0,
+         "bpBlock": 0,
+         "signed": false,
+         "handler": "raw"
+   },
+   "7": {
+         "name": "GX2_SURFACE_FORMAT_TC_R8_G8_UNORM",
+         "bpp": 0,
+         "bpBlock": 0,
+         "signed": false,
+         "handler": "raw"
+   },
+   "8": {
+         "name": "GX2_SURFACE_FORMAT_TCS_R5_G6_B5_UNORM",
+         "bpp": 0,
+         "bpBlock": 0,
+         "signed": false,
+         "handler": "raw"
+   },
+   "10": {
+         "name": "GX2_SURFACE_FORMAT_TC_R5_G5_B5_A1_UNORM",
+         "bpp": 0,
+         "bpBlock": 0,
+         "signed": false,
+         "handler": "raw"
+   },
+   "11": {
+         "name": "GX2_SURFACE_FORMAT_TC_R4_G4_B4_A4_UNORM",
+         "bpp": 0,
+         "bpBlock": 0,
+         "signed": false,
+         "handler": "raw"
+   },
+   "12": {
+         "name": "GX2_SURFACE_FORMAT_TC_A1_B5_G5_R5_UNORM",
+         "bpp": 0,
+         "bpBlock": 0,
+         "signed": false,
+         "handler": "raw"
+   },
+   "15": {
+         "name": "GX2_SURFACE_FORMAT_TC_R16_G16_UNORM",
+         "bpp": 0,
+         "bpBlock": 0,
+         "signed": false,
+         "handler": "raw"
+   },
+   "17": {
+         "name": "GX2_SURFACE_FORMAT_D_D24_S8_UNORM",
+         "bpp": 0,
+         "bpBlock": 0,
+         "signed": false,
+         "handler": "raw",
+         "comment": "smae as GX2_SURFACE_FORMAT_T_R24_UNORM_X8"
+   },
+   "25": {
+         "name": "GX2_SURFACE_FORMAT_TCS_R10_G10_B10_A2_UNORM",
+         "bpp": 0,
+         "bpBlock": 0,
+         "signed": false,
+         "handler": "raw"
+   },
+   "26": {
+         "name": "GX2_SURFACE_FORMAT_TCS_R8_G8_B8_A8_UNORM",
+         "bpp": 0,
+         "bpBlock": 0,
+         "signed": false,
+         "handler": "raw"
+   },
+   "27": {
+         "name": "GX2_SURFACE_FORMAT_TCS_A2_B10_G10_R10_UNORM",
+         "bpp": 0,
+         "bpBlock": 0,
+         "signed": false,
+         "handler": "raw"
+   },
+   "31": {
+         "name": "GX2_SURFACE_FORMAT_TC_R16_G16_B16_A16_UNORM",
+         "bpp": 0,
+         "bpBlock": 0,
+         "signed": false,
+         "handler": "raw"
+   },
+   "49": {
+         "name": "GX2_SURFACE_FORMAT_T_BC1_UNORM",
+         "bpp": 4,
+         "bpBlock": 64,
+         "signed": false,
+         "handler": "bc1"
+   },
+   "50": {
+         "name": "GX2_SURFACE_FORMAT_T_BC2_UNORM",
+         "bpp": 0,
+         "bpBlock": 0,
+         "signed": false,
+         "handler": "bc2"
+   },
+   "51": {
+         "name": "GX2_SURFACE_FORMAT_T_BC3_UNORM",
+         "bpp": 2,
+         "bpBlock": 128,
+         "signed": false,
+         "handler": "bc3"
+   },
+   "52": {
+         "name": "GX2_SURFACE_FORMAT_T_BC4_UNORM",
+         "bpp": 4,
+         "bpBlock": 64,
+         "signed": false,
+         "handler": "bc4"
+   },
+   "53": {
+         "name": "GX2_SURFACE_FORMAT_T_BC5_UNORM",
+         "bpp": 2,
+         "bpBlock": 128,
+         "signed": false,
+         "handler": "bc5"
+   },
+   "129": {
+         "name": "GX2_SURFACE_FORMAT_T_NV12_UNORM",
+         "bpp": 0,
+         "bpBlock": 0,
+         "signed": false,
+         "handler": "raw"
+   },
+   "257": {
+         "name": "GX2_SURFACE_FORMAT_TC_R8_UINT",
+         "bpp": 0,
+         "bpBlock": 0,
+         "signed": false,
+         "handler": "raw"
+   },
+   "261": {
+         "name": "GX2_SURFACE_FORMAT_TC_R16_UINT",
+         "bpp": 0,
+         "bpBlock": 0,
+         "signed": false,
+         "handler": "raw"
+   },
+   "263": {
+         "name": "GX2_SURFACE_FORMAT_TC_R8_G8_UINT",
+         "bpp": 0,
+         "bpBlock": 0,
+         "signed": false,
+         "handler": "raw"
+   },
+   "269": {
+         "name": "GX2_SURFACE_FORMAT_TC_R32_UINT",
+         "bpp": 0,
+         "bpBlock": 0,
+         "signed": false,
+         "handler": "raw"
+   },
+   "271": {
+         "name": "GX2_SURFACE_FORMAT_TC_R16_G16_UINT",
+         "bpp": 0,
+         "bpBlock": 0,
+         "signed": false,
+         "handler": "raw"
+   },
+   "273": {
+         "name": "GX2_SURFACE_FORMAT_T_X24_G8_UINT",
+         "bpp": 0,
+         "bpBlock": 0,
+         "signed": false,
+         "handler": "raw"
+   },
+   "281": {
+         "name": "GX2_SURFACE_FORMAT_TC_R10_G10_B10_A2_UINT",
+         "bpp": 0,
+         "bpBlock": 0,
+         "signed": false,
+         "handler": "raw"
+   },
+   "282": {
+         "name": "GX2_SURFACE_FORMAT_TC_R8_G8_B8_A8_UINT",
+         "bpp": 0,
+         "bpBlock": 0,
+         "signed": false,
+         "handler": "raw"
+   },
+   "283": {
+         "name": "GX2_SURFACE_FORMAT_TC_A2_B10_G10_R10_UINT",
+         "bpp": 0,
+         "bpBlock": 0,
+         "signed": false,
+         "handler": "raw"
+   },
+   "284": {
+         "name": "GX2_SURFACE_FORMAT_T_X32_G8_UINT_X24",
+         "bpp": 0,
+         "bpBlock": 0,
+         "signed": false,
+         "handler": "raw"
+   },
+   "285": {
+         "name": "GX2_SURFACE_FORMAT_TC_R32_G32_UINT",
+         "bpp": 0,
+         "bpBlock": 0,
+         "signed": false,
+         "handler": "raw"
+   },
+   "287": {
+         "name": "GX2_SURFACE_FORMAT_TC_R16_G16_B16_A16_UINT",
+         "bpp": 0,
+         "bpBlock": 0,
+         "signed": false,
+         "handler": "raw"
+   },
+   "290": {
+         "name": "GX2_SURFACE_FORMAT_TC_R32_G32_B32_A32_UINT",
+         "bpp": 0,
+         "bpBlock": 0,
+         "signed": false,
+         "handler": "raw"
+   },
+   "513": {
+         "name": "GX2_SURFACE_FORMAT_TC_R8_SNORM",
+         "bpp": 0,
+         "bpBlock": 0,
+         "signed": false,
+         "handler": "raw"
+   },
+   "517": {
+         "name": "GX2_SURFACE_FORMAT_TC_R16_SNORM",
+         "bpp": 0,
+         "bpBlock": 0,
+         "signed": true,
+         "handler": "raw"
+   },
+   "519": {
+         "name": "GX2_SURFACE_FORMAT_TC_R8_G8_SNORM",
+         "bpp": 0,
+         "bpBlock": 0,
+         "signed": true,
+         "handler": "raw"
+   },
+   "527": {
+         "name": "GX2_SURFACE_FORMAT_TC_R16_G16_SNORM",
+         "bpp": 0,
+         "bpBlock": 0,
+         "signed": true,
+         "handler": "raw"
+   },
+   "537": {
+         "name": "GX2_SURFACE_FORMAT_TC_R10_G10_B10_A2_SNORM",
+         "bpp": 0,
+         "bpBlock": 0,
+         "signed": true,
+         "handler": "raw"
+   },
+   "538": {
+         "name": "GX2_SURFACE_FORMAT_TC_R8_G8_B8_A8_SNORM",
+         "bpp": 0,
+         "bpBlock": 0,
+         "signed": true,
+         "handler": "raw"
+   },
+   "543": {
+         "name": "GX2_SURFACE_FORMAT_TC_R16_G16_B16_A16_SNORM",
+         "bpp": 0,
+         "bpBlock": 0,
+         "signed": true,
+         "handler": "raw"
+   },
+   "564": {
+         "name": "GX2_SURFACE_FORMAT_T_BC4_SNORM",
+         "bpp": 4,
+         "bpBlock": 64,
+         "signed": true,
+         "handler": "bc4"
+   },
+   "565": {
+         "name": "GX2_SURFACE_FORMAT_T_BC5_SNORM",
+         "bpp": 2,
+         "bpBlock": 128,
+         "signed": true,
+         "handler": "bc5"
+   },
+   "769": {
+         "name": "GX2_SURFACE_FORMAT_TC_R8_SINT",
+         "bpp": 0,
+         "bpBlock": 0,
+         "signed": true,
+         "handler": "raw"
+   },
+   "773": {
+         "name": "GX2_SURFACE_FORMAT_TC_R16_SINT",
+         "bpp": 0,
+         "bpBlock": 0,
+         "signed": true,
+         "handler": "raw"
+   },
+   "775": {
+         "name": "GX2_SURFACE_FORMAT_TC_R8_G8_SINT",
+         "bpp": 0,
+         "bpBlock": 0,
+         "signed": true,
+         "handler": "raw"
+   },
+   "781": {
+         "name": "GX2_SURFACE_FORMAT_TC_R32_SINT",
+         "bpp": 0,
+         "bpBlock": 0,
+         "signed": true,
+         "handler": "raw"
+   },
+   "783": {
+         "name": "GX2_SURFACE_FORMAT_TC_R16_G16_SINT",
+         "bpp": 0,
+         "bpBlock": 0,
+         "signed": true,
+         "handler": "raw"
+   },
+   "793": {
+         "name": "GX2_SURFACE_FORMAT_TC_R10_G10_B10_A2_SINT",
+         "bpp": 0,
+         "bpBlock": 0,
+         "signed": true,
+         "handler": "raw"
+   },
+   "794": {
+         "name": "GX2_SURFACE_FORMAT_TC_R8_G8_B8_A8_SINT",
+         "bpp": 0,
+         "bpBlock": 0,
+         "signed": true,
+         "handler": "raw"
+   },
+   "797": {
+         "name": "GX2_SURFACE_FORMAT_TC_R32_G32_SINT",
+         "bpp": 0,
+         "bpBlock": 0,
+         "signed": true,
+         "handler": "raw"
+   },
+   "799": {
+         "name": "GX2_SURFACE_FORMAT_TC_R16_G16_B16_A16_SINT",
+         "bpp": 0,
+         "bpBlock": 0,
+         "signed": true,
+         "handler": "raw"
+   },
+   "802": {
+         "name": "GX2_SURFACE_FORMAT_TC_R32_G32_B32_A32_SINT",
+         "bpp": 0,
+         "bpBlock": 0,
+         "signed": true,
+         "handler": "raw"
+   },
+   "1050": {
+         "name": "GX2_SURFACE_FORMAT_TCS_R8_G8_B8_A8_SRGB",
+         "bpp": 0,
+         "bpBlock": 0,
+         "signed": true,
+         "handler": "raw"
+   },
+   "1073": {
+         "name": "GX2_SURFACE_FORMAT_T_BC1_SRGB",
+         "bpp": 4,
+         "bpBlock": 64,
+         "signed": true,
+         "handler": "bc1"
+   },
+   "1074": {
+         "name": "GX2_SURFACE_FORMAT_T_BC2_SRGB",
+         "bpp": 0,
+         "bpBlock": 0,
+         "signed": true,
+         "handler": "bc2"
+   },
+   "1075": {
+         "name": "GX2_SURFACE_FORMAT_T_BC3_SRGB",
+         "bpp": 2,
+         "bpBlock": 128,
+         "signed": true,
+         "handler": "bc3"
+   },
+   "2054": {
+         "name": "GX2_SURFACE_FORMAT_TC_R16_FLOAT",
+         "bpp": 0,
+         "bpBlock": 0,
+         "signed": false,
+         "handler": "raw"
+   },
+   "2062": {
+         "name": "GX2_SURFACE_FORMAT_TCD_R32_FLOAT",
+         "bpp": 0,
+         "bpBlock": 0,
+         "signed": false,
+         "handler": "raw"
+   },
+   "2064": {
+         "name": "GX2_SURFACE_FORMAT_TC_R16_G16_FLOAT",
+         "bpp": 0,
+         "bpBlock": 0,
+         "signed": false,
+         "handler": "raw"
+   },
+   "2065": {
+         "name": "GX2_SURFACE_FORMAT_D_D24_S8_FLOAT",
+         "bpp": 0,
+         "bpBlock": 0,
+         "signed": false,
+         "handler": "raw"
+   },
+   "2070": {
+         "name": "GX2_SURFACE_FORMAT_TC_R11_G11_B10_FLOAT",
+         "bpp": 0,
+         "bpBlock": 0,
+         "signed": false,
+         "handler": "raw"
+   },
+   "2076": {
+         "name": "GX2_SURFACE_FORMAT_D_D32_FLOAT_S8_UINT_X24",
+         "bpp": 0,
+         "bpBlock": 0,
+         "signed": false,
+         "handler": "raw",
+         "comment": "same as GX2_SURFACE_FORMAT_T_R32_FLOAT_X8_X24"
+   },
+   "2078": {
+         "name": "GX2_SURFACE_FORMAT_TC_R32_G32_FLOAT",
+         "bpp": 0,
+         "bpBlock": 0,
+         "signed": false,
+         "handler": "raw"
+   },
+   "2080": {
+         "name": "GX2_SURFACE_FORMAT_TC_R16_G16_B16_A16_FLOAT",
+         "bpp": 0,
+         "bpBlock": 0,
+         "signed": false,
+         "handler": "raw"
+   },
+   "2083": {
+         "name": "GX2_SURFACE_FORMAT_TC_R32_G32_B32_A32_FLOAT",
+         "bpp": 0,
+         "bpBlock": 0,
+         "signed": false,
+         "handler": "raw"
+      }
+}

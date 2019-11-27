@@ -1,0 +1,14 @@
+{
+    "center": {"type": "float32", "count": 2},
+    "lodScale": {"type": "float32"},
+    "groundHeightMin": {"type": "float32"},
+    "groundHeightMax": {"type": "float32"},
+    "waterHeightMin": {"type": "float32"},
+    "waterHeightMax": {"type": "float32"},
+    "__UNKNOWN_0_": {"type": "u32"},
+    "nameOffset": {"type": "u32", "addValue": "@offset"},
+    "name":       {"type": "string", "offset": "nameOffset"},
+    "__UNKNOWN_1_": {"type": "u32", "default": 0},
+    "__UNKNOWN_2_": {"type": "u32", "default": 0},
+    "hasMoreData"  : {"type": "u32", "default": 0}
+}

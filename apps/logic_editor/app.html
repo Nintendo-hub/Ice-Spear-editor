@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--
+            @copyright 2018 - Max Bebök
+            @author Max Bebök
+            @license GNU-GPLv3 - see the "LICENSE" file in the root directory
+        -->
+
+    <title>Ice-Spear - Logic Editor</title>
+
+    <link rel="stylesheet" href="./app.css" />
+
+    <base href="./../../">
+
+    <script src="apps/globals.js"></script>
+
+    <script src="lib/3d_renderer/lib/libs/stats.min.js"></script>
+
+    <link rel="stylesheet" href="css/photon.dark.css" data-theme="href" />
+    <link rel="stylesheet" href="css/theme.dark.css" data-theme="href" />
+
+    <link rel="stylesheet" href="node_modules/izitoast/dist/css/iziToast.min.css" />
+
+    <link rel="stylesheet" href="css/loader.css">
+    <link rel="stylesheet" href="css/split.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+</head>
+
+<body>
+    <div id="loader-container" hidden>
+        <div id="loader"></div>
+        <span class="data-status"></span>
+        <span class="data-info"></span>
+    </div>
+
+    <div class="window" id="logicWindow"> 
+
+        <div class="window-content">
+            <div class="pane-group">
+                <div class="pane-sm sidebar" id="main-sidebar-1">
+                        
+                    <h5 class="nav-group-title">Tools</h5>
+
+                    <nav class="nav-group tool-group">
+                        <span class="nav-group-item">
+                            <button class="btn btn btn-default data-tool-saveLayout">Save Layout</button>
+                        </span>
+                    </nav>
+                </div>
+
+                <div class="pane" id="main-sidebar-2">
+                    <div id="cytoscapeContainer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

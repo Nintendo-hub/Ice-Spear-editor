@@ -1,0 +1,18 @@
+{
+    "magic"                   : {"type": "u32"},
+    "regBytesText"            : {"type": "u32"},
+    "regBytesTextAlign"       : {"type": "u32"},
+    "regBytesData"            : {"type": "u32"},
+    "regBytesDataAlign"       : {"type": "u32"},
+    "regBytesLoaderInfo"      : {"type": "u32"},
+    "regBytesLoaderInfoAlign" : {"type": "u32"},
+    "regBytesTemp"            : {"type": "u32"},
+    "trampAdj"                : {"type": "u32"},
+    "sDABase"                 : {"type": "u32"},
+    "sDA2Base"                : {"type": "u32"},
+    "sizeCoreStacks"          : {"type": "u32"},
+    "srcFileNameOffset"       : {"type": "u32"},
+    "flags"                   : {"type": "u32"},
+    "sysHeapBytes"            : {"type": "u32"},
+    "tagsOffset"              : {"type": "u32"}
+}

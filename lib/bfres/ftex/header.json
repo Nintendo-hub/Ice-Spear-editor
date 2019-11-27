@@ -1,0 +1,26 @@
+{
+    "magic" : {"type" : "string", "length": 4, "checkValue": "FTEX"},
+
+    "surface": { "type": "structure",
+        "structure": "./lib/bfres/gx2/surface.json"
+    },
+
+    "textureHandle" : {"type": "u32", "default": 0},
+    "arrayLength"   : {"type": "u32"},
+
+    "fileNameOffset" : {"type": "s32", "addValue": "@offset"},
+    "filePathOffset" : {"type": "s32", "addValue": "@offset"},
+    "dataOffset"     : {"type": "s32", "addValue": "@offset"},
+    "mipmapOffset"   : {"type": "s32", "addValue": "@offset"},
+
+    "userDataIndexOffset" : {"type": "s32", "addValue": "@offset"},
+    "userDataEntryCount"  : {"type": "u16"},
+
+    "__PADING__"  : {"type": "u8", "count": 2},
+
+    "fileNameLength" : {"type": "s32",    "offset": "fileNameOffset", "addOffset": -4},
+    "fileName"       : {"type": "string", "offset": "fileNameOffset", "length": "fileNameLength"},
+
+    "filePathLength" : {"type": "s32",    "offset": "filePathOffset", "addOffset": -4},
+    "filePath"       : {"type": "string", "offset": "filePathOffset", "length": "filePathLength"}
+}

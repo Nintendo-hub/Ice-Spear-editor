@@ -1,0 +1,12 @@
+{
+    "arrayCount": {"type": "u16"},
+    "type": {"type": "u8"},
+
+    "__PADDING__": {"type": "u8"},
+
+    "nameOffset"  : {"type": "s32", "addValue": "@offset"},
+    "arrayOffset"  : {"type": "s32", "value": "@offset"},
+
+    "nameLength" : {"type": "s32",    "offset": "nameOffset", "addOffset": -4},
+    "name"       : {"type": "string", "offset": "nameOffset", "length": "nameLength"}
+}

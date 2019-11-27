@@ -1,0 +1,4 @@
+{
+    "offset" : {"type": "s32", "addValue": "@offset"},
+    "length" : {"type": "u32"}
+}

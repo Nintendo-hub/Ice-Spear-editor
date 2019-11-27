@@ -1,0 +1,84 @@
+/**
+* @copyright 2018 - Max Bebök
+* @author Max Bebök
+* @license GNU-GPLv3 - see the "LICENSE" file in the root directory
+*/
+
+.loaded
+{
+    background-color: #21252b;
+    __color: black;
+}
+
+.title-colored
+{
+    color: #cab19e;
+}
+
+.list-group-item:hover
+{
+    background-color: #181a1f;
+    color: white;
+}
+
+table tr.active
+{
+    color: #73c990;
+    background-color: #242e2e;
+}
+
+table tr.active td
+{
+    border-width: 1px 0 1px 0;
+    border-color: #73c990;
+    border-style: solid;
+}
+
+table tr.active:first td
+{
+    border-width: 0 0 1px 0;
+}
+
+table tr.active:last td
+{
+    border-width: 1px 0 0 0;
+}
+
+.window .bg-checkerboard
+{
+    background-image: url("./../assets/img/checkerboard.dark.png");
+    transition: background-image .5s ease-in-out;
+}
+
+.window .list-group-item.active img.media-object
+{
+    filter: none;
+}
+
+.window .list-group-item.active:hover img.media-object
+{
+    filter: invert(1);
+}
+
+::-webkit-scrollbar {
+    background-color: transparent;
+    width: 1.0em;
+    height: 1.0em;
+}
+
+::-webkit-scrollbar-corner
+{
+    background: #282c34;
+    border: 1px solid #181a1f;
+}
+
+::-webkit-scrollbar-thumb:window-inactive,
+::-webkit-scrollbar-thumb {
+    background: #353b45;
+    border-radius: 14px;
+    border: 1px solid #181a1f;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #4b5364;
+}

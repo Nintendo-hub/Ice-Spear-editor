@@ -1,0 +1,185 @@
+{
+    "name": "Lamp + Rope",
+    "actors": [
+        {
+            "HashId": {
+                "type": 211,
+                "value": "{ID0}"
+            },
+            "SRTHash": {
+                "type": 209,
+                "value": -303546465
+            },
+            "Translate": [
+                {
+                    "type": 210,
+                    "value": 0
+                },
+                {
+                    "type": 210,
+                    "value": 4.5
+                },
+                {
+                    "type": 210,
+                    "value": 0.5
+                }
+            ],
+            "UnitConfigName": {
+                "type": 160,
+                "value": "ConstraintDummy"
+            }
+        },
+        {
+            "!Parameters": {
+                "DropTable": {
+                    "type": 160,
+                    "value": "Normal"
+                },
+                "RopeAlwaysUpdateRigidParam": {
+                    "type": 208,
+                    "value": false
+                },
+                "RopeFlag": {
+                    "type": 209,
+                    "value": 0
+                },
+                "SharpWeaponJudgeType": {
+                    "type": 209,
+                    "value": 0
+                }
+            },
+            "HashId": {
+                "type": 211,
+                "value": "{ID1}"
+            },
+            "LinksToObj": [
+                {
+                    "!Parameters": {
+                        "Pivot": {
+                            "X": {
+                                "type": 210,
+                                "value": 0
+                            },
+                            "Y": {
+                                "type": 210,
+                                "value": 0
+                            },
+                            "Z": {
+                                "type": 210,
+                                "value": 0
+                            }
+                        }
+                    },
+                    "DefinitionName": {
+                        "type": 160,
+                        "value": "BAndSLimitAngYCs"
+                    },
+                    "DestUnitHashId": {
+                        "type": 211,
+                        "value": "{ID0}"
+                    }
+                },
+                {
+                    "!Parameters": {
+                        "Pivot": {
+                            "X": {
+                                "type": 210,
+                                "value": 0
+                            },
+                            "Y": {
+                                "type": 210,
+                                "value": 0
+                            },
+                            "Z": {
+                                "type": 210,
+                                "value": 0
+                            }
+                        }
+                    },
+                    "DefinitionName": {
+                        "type": 160,
+                        "value": "BAndSLimitAngYCs"
+                    },
+                    "DestUnitHashId": {
+                        "type": 211,
+                        "value": "{ID2}"
+                    }
+                }
+            ],
+            "SRTHash": {
+                "type": 209,
+                "value": -741963014
+            },
+            "Scale": [
+                {
+                    "type": 210,
+                    "value": 1
+                },
+                {
+                    "type": 210,
+                    "value": 4.5
+                },
+                {
+                    "type": 210,
+                    "value": 1
+                }
+            ],
+            "Translate": [
+                {
+                    "type": 210,
+                    "value": 0
+                },
+                {
+                    "type": 210,
+                    "value": 4.5
+                },
+                {
+                    "type": 210,
+                    "value": 0
+                }
+            ],
+            "UnitConfigName": {
+                "type": 160,
+                "value": "Rope"
+            }
+        },
+        {
+            "!Parameters": {
+                "DropTable": {
+                    "type": 160,
+                    "value": "Normal"
+                },
+                "SharpWeaponJudgeType": {
+                    "type": 209,
+                    "value": 0
+                }
+            },
+            "HashId": {
+                "type": 211,
+                "value": "{ID2}"
+            },
+            "SRTHash": {
+                "type": 209,
+                "value": -1935499419
+            },
+            "Translate": [
+                {
+                    "type": 210,
+                    "value": 0
+                },
+                {
+                    "type": 210,
+                    "value": 0
+                },
+                {
+                    "type": 210,
+                    "value": 0
+                }
+            ],
+            "UnitConfigName": {
+                "type": 160,
+                "value": "DgnObj_HangedLamp_A"
+            }
+        }
+    ]
+}

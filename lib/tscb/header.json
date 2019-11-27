@@ -1,0 +1,27 @@
+{
+    "magic": {"type" : "string", "length": 4, "checkValue": "TSCB", "default": "TSCB"},
+    "__UNKNOWN_0_": {"type": "u32", "default": 167772160},
+    "__UNKNOWN_1_": {"type": "u32", "default": 10},
+    "offsetStringTable": {"type": "u32"},
+    "halfSectionSize": {"type": "float32", "default": 500.0},
+    "__UNKNOWN_2_": {"type": "float32", "default": 800.0},
+    "materialTableCount": {"type": "u32"},
+    "tileTableCount": {"type": "u32"},
+    "__UNKNOWN_3_": {"type": "u32", "default": 0},
+    "__UNKNOWN_4_": {"type": "u32", "default": 0},
+    "__UNKNOWN_5_": {"type": "float32", "default": 32.0},
+    "__UNKNOWN_6_": {"type": "u32", "default": 8},
+    "materialTableSize": {"type": "u32"},
+
+    "materials": { "type": "structure", "count": "materialTableCount",
+        "structure": {
+            "offset": {"type": "u32", "addValue": "@offset"},
+            "data": { "type": "structure", "setOffset": "offset", "restoreOffset": true,
+                "structure": {
+                    "index": {"type": "u32"},
+                    "rgba": {"type": "float32", "count": 4}
+                }
+            }
+        }
+    }
+}

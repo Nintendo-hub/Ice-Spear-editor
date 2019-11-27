@@ -1,0 +1,273 @@
+{
+    "name": "Door - Ball (walk)",
+    "actors": [
+        {
+            "!Parameters": {
+                "DropTable": {
+                    "type": 160,
+                    "value": "Normal"
+                },
+                "MoveAxis": {
+                    "type": 209,
+                    "value": 1
+                },
+                "MoveDis": {
+                    "type": 210,
+                    "value": 4
+                },
+                "MoveSpeed": {
+                    "type": 210,
+                    "value": 0.5
+                },
+                "SharpWeaponJudgeType": {
+                    "type": 209,
+                    "value": 0
+                }
+            },
+            "HashId": {
+                "type": 211,
+                "value": "{ID0}"
+            },
+            "Rotate": {
+                "type": 210,
+                "value": 1.5707999467849731
+            },
+            "SRTHash": {
+                "type": 209,
+                "value": 1848240157
+            },
+            "Translate": [
+                {
+                    "type": 210,
+                    "value": 0
+                },
+                {
+                    "type": 210,
+                    "value": 0
+                },
+                {
+                    "type": 210,
+                    "value": 0
+                }
+            ],
+            "UnitConfigName": {
+                "type": 160,
+                "value": "SwitchShutter"
+            }
+        },
+        {
+            "!Parameters": {
+                "AutoSave": {
+                    "type": 208,
+                    "value": false
+                },
+                "CameraPriority": {
+                    "type": 209,
+                    "value": 1
+                },
+                "CameraSet": {
+                    "type": 160,
+                    "value": "-"
+                },
+                "ForceCalcInEvent": {
+                    "type": 208,
+                    "value": false
+                },
+                "Shape": {
+                    "type": 160,
+                    "value": "Sphere"
+                }
+            },
+            "HashId": {
+                "type": 211,
+                "value": "{ID1}"
+            },
+            "SRTHash": {
+                "type": 209,
+                "value": -769361781
+            },
+            "Scale": [
+                {
+                    "type": 210,
+                    "value": 3
+                },
+                {
+                    "type": 210,
+                    "value": 2
+                },
+                {
+                    "type": 210,
+                    "value": 2
+                }
+            ],
+            "Translate": [
+                {
+                    "type": 210,
+                    "value": 0
+                },
+                {
+                    "type": 210,
+                    "value": 2
+                },
+                {
+                    "type": 210,
+                    "value": 0
+                }
+            ],
+            "UnitConfigName": {
+                "type": 160,
+                "value": "Area"
+            }
+        },
+        {
+            "!Parameters": {
+                "ActorName": {
+                    "type": 160,
+                    "value": "AncientBall"
+                },
+                "Count": {
+                    "type": 209,
+                    "value": 1
+                },
+                "DefaultBasicSignal": {
+                    "type": 208,
+                    "value": false
+                },
+                "ForceCalcInEvent": {
+                    "type": 208,
+                    "value": false
+                },
+                "IsMagneGrabbed": {
+                    "type": 209,
+                    "value": 0
+                },
+                "IsSendMessage": {
+                    "type": 208,
+                    "value": true
+                },
+                "IsStopFromStopTimer": {
+                    "type": 209,
+                    "value": 0
+                }
+            },
+            "HashId": {
+                "type": 211,
+                "value": "{ID2}"
+            },
+            "LinksToObj": [
+                {
+                    "DefinitionName": {
+                        "type": 160,
+                        "value": "AreaCol"
+                    },
+                    "DestUnitHashId": {
+                        "type": 211,
+                        "value": "{ID1}"
+                    }
+                },
+                {
+                    "!Parameters": {
+                        "NoAutoDemoMember": {
+                            "type": 208,
+                            "value": false
+                        }
+                    },
+                    "DefinitionName": {
+                        "type": 160,
+                        "value": "BasicSigOnOnly"
+                    },
+                    "DestUnitHashId": {
+                        "type": 211,
+                        "value": "{ID3}"
+                    }
+                }
+            ],
+            "SRTHash": {
+                "type": 209,
+                "value": -1765165152
+            },
+            "Translate": [
+                {
+                    "type": 210,
+                    "value": 0
+                },
+                {
+                    "type": 210,
+                    "value": 0
+                },
+                {
+                    "type": 210,
+                    "value": 2
+                }
+            ],
+            "UnitConfigName": {
+                "type": 160,
+                "value": "ActorObserverTag"
+            }
+        },
+        {
+            "!Parameters": {
+                "IncrementSave": {
+                    "type": 208,
+                    "value": false
+                },
+                "MakeSaveFlag": {
+                    "type": 209,
+                    "value": 0
+                },
+                "NoChangeSignal": {
+                    "type": 208,
+                    "value": false
+                },
+                "SaveFlagOnOffType": {
+                    "type": 209,
+                    "value": 0
+                }
+            },
+            "HashId": {
+                "type": 211,
+                "value": "{ID3}"
+            },
+            "LinksToObj": [
+                {
+                    "!Parameters": {
+                        "NoAutoDemoMember": {
+                            "type": 208,
+                            "value": false
+                        }
+                    },
+                    "DefinitionName": {
+                        "type": 160,
+                        "value": "BasicSig"
+                    },
+                    "DestUnitHashId": {
+                        "type": 211,
+                        "value": "{ID0}"
+                    }
+                }
+            ],
+            "SRTHash": {
+                "type": 209,
+                "value": -44730862
+            },
+            "Translate": [
+                {
+                    "type": 210,
+                    "value": 0
+                },
+                {
+                    "type": 210,
+                    "value": 0
+                },
+                {
+                    "type": 210,
+                    "value": 3
+                }
+            ],
+            "UnitConfigName": {
+                "type": 160,
+                "value": "LinkTagAnd"
+            }
+        }
+    ]
+}

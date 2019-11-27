@@ -1,0 +1,99 @@
+[
+    {
+       "selector": "node",
+       "style": {
+          "shape": "roundrectangle",
+          "padding": 5,
+          "color": "white",
+          "text-outline-width": 2,
+          "text-outline-color": "#222",
+          "font-size": 12,
+          "text-valign": "center",
+          "text-halign": "center",
+          "background-color": "data(bgColor)"
+       }
+    },
+    {
+        "selector": ".actor-name",
+        "style": {
+           "shape": "roundrectangle",
+           "width": "label",
+           "height": "label",
+           "padding": 5,
+           "label": "data(labelName)",
+           "color": "white",
+           "text-outline-width": 2,
+           "text-outline-color": "#222",
+           "font-size": 12,
+           "text-valign": "center",
+           "text-halign": "center",
+           "text-wrap": "wrap",
+           "background-color": "data(bgColor)"
+        }
+     },
+    {
+       "selector": ".param-name",
+       "style": {
+          "shape": "roundrectangle",
+          "width": "label",
+          "height": "label",
+          "padding": 3,
+          "label": "data(labelName)",
+          "color": "white",
+          "text-outline-width": 2,
+          "text-outline-color": "#222",
+          "font-size": 10,
+          "text-valign": "center",
+          "text-halign": "center",
+          "background-color": "#555"
+       }
+    },
+    {
+       "selector": ".param-value",
+       "style": {
+          "shape": "roundrectangle",
+          "width": "label",
+          "height": "label",
+          "padding": 3,
+          "label": "data(labelValue)",
+          "color": "white",
+          "text-outline-width": 2,
+          "text-outline-color": "#222",
+          "font-size": 10,
+          "text-valign": "center",
+          "text-halign": "center",
+          "background-color": "#999"
+       }
+    },
+
+
+    {
+       "selector": "edge",
+       "style": {
+          "label": "data(labelName)",
+          "color": "white",
+          "text-outline-width": 2,
+          "text-outline-color": "#092d0c",
+          "font-size": 8,
+          "curve-style": "bezier",
+          "width": 3,
+          "line-color": "#1f9b2b",
+          "target-arrow-color": "#1f9b2b",
+          "target-arrow-shape": "triangle",
+          "arrow-scale": 1.2
+       }
+    },
+    {
+        "selector": ".param-edge",
+        "style": {
+           "label": "data(labelName)",
+           "color": "white",
+           "text-outline-width": 2,
+           "text-outline-color": "#333",
+           "font-size": 6,
+           "curve-style": "haystack",
+           "width": 2,
+           "line-color": "#888"
+        }
+     }
+ ]

@@ -1,0 +1,30 @@
+{
+    "magic"  : {"type" : "string", "length": 4, "checkValue": "PrOD", "default": "PrOD"},
+    "version": {"type": "u8", "default": 1},
+    "__PADDING_0_": {"type": "u8", "count": 3},
+    "__UNKNOWN_0_": {"type": "u32", "default": 1},
+    "__PADDING_1_": {"type": "u32"},
+    "fileSize": {"type": "u32"},
+    "meshNum" : {"type": "u32"},
+    "offsetStringTable": {"type": "u32"},
+    "__PADDING_2_": {"type": "u32"},
+
+    "meshes": { "type": "structure", "count": "meshNum",
+        "structure": {
+            "objectSize": {"type": "u32"},
+            "objectCount": {"type": "u32"},
+            "objectNameOffset": {"type": "u32", "addValue": "offsetStringTable"},
+            "objectName": {"type": "string", "offset": "objectNameOffset"},
+            "__PADDING__": {"type": "u32"},
+
+            "objects": { "type": "structure", "count": "objectCount",
+                "structure": {
+                    "position": {"type": "float", "count": 3},
+                    "rotation": {"type": "float", "count": 3},
+                    "scale"   : {"type": "float"},
+                    "__PADDING__": {"type": "u32"}
+                }
+            }
+        }
+    }
+}

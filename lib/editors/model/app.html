@@ -1,0 +1,158 @@
+<div class="window app-model-editor">
+
+    <style>
+        .app-model-editor canvas
+        {
+            width : 100%;
+            height: 100%;
+        }
+
+        .app-model-editor .canvasWindow
+        {
+            padding: 0;
+            overflow: hidden;
+        }
+    </style>
+
+    <header class="toolbar toolbar-header">
+        <h1 class="title">FMDL - Editor</h1>
+    </header>
+
+    <div class="window-content">
+        <div class="pane-group">
+            <div class="pane-sm sidebar sidebar-1" style="max-width: none; width: 100px;">
+
+                <h5 class="nav-group-title">FMDL - Header</h5>
+
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td>Name</td>
+                            <td class="data-header-fileName">-</td>
+                        </tr>
+                        <tr>
+                            <td>Path</td>
+                            <td class="data-header-filePath">-</td>
+                        </tr>
+                        <tr>
+                            <td>FVTX count</td>
+                            <td class="data-header-fvtxCount">-</td>
+                        </tr>
+                        <tr>
+                            <td>FSHP count</td>
+                            <td class="data-header-fshpCount">-</td>
+                        </tr>
+                        <tr>
+                            <td>FMAT count</td>
+                            <td class="data-header-fmatCount">-</td>
+                        </tr>
+                        <tr>
+                            <td>User-Data count</td>
+                            <td class="data-header-userDataCount">-</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h5 class="nav-group-title">Tools</h5>
+
+                <nav class="nav-group">
+                    <span class="nav-group-item">
+                        <button class="btn btn btn-default data-tool-exportOBJ">Export as OBJ + MTL</button>
+                    </span>
+                </nav>
+
+                <h5 class="nav-group-title">Sections</h5>
+
+                <ul id="tab_tabContainer" class="list-group">
+
+                    <li class="list-group-item">
+                        <img class="img media-object pull-left" src="assets/img/icons/fmdl/texture.png" width="32" height="32">
+                        <div class="media-body">
+                            <strong class="data-fileEntry-type">FMAT</strong>
+                            <p class="data-fileEntry-description">Material Data</p>
+                        </div>
+                    </li>
+
+                    <li class="list-group-scroll">
+                        <input class="form-control dynamic-input search-material" type="text" placeholder="Search materials / textures">
+                        <table class="table scroll-table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Material</th>
+                                    <th>Textures</th>
+                                    <th>Render-Info</th>
+                                </tr>
+                            </thead>
+                            <tbody class="data-fmat-names">
+                                <tr>
+                                    <td>-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </li>
+
+                    <li class="list-group-item">
+                        <img class="img media-object pull-left" src="assets/img/icons/fmdl/bone.png" width="32" height="32">
+                        <div class="media-body">
+                            <strong class="data-fileEntry-type">FSKL</strong>
+                            <p class="data-fileEntry-description">Bone Data</p>
+                        </div>
+                    </li>
+
+                    <li class="list-group-item">
+                        <img class="img media-object pull-left" src="assets/img/icons/fmdl/vertex.png" width="32" height="32">
+                        <div class="media-body">
+                            <strong class="data-fileEntry-type">FVTX</strong>
+                            <p class="data-fileEntry-description">Vertex Data</p>
+                        </div>
+                    </li>
+
+                    <li class="list-group-item">
+                        <img class="img media-object pull-left" src="assets/img/icons/fmdl/shape.png" width="32" height="32">
+                        <div class="media-body">
+                            <strong class="data-fileEntry-type">FSHP</strong>
+                            <p class="data-fileEntry-description">Polygon Shapes</p>
+                        </div>
+                    </li>
+
+                    <li class="list-group-item">
+                        <img class="img media-object pull-left" src="assets/img/icons/fmdl/data.png" width="32" height="32">
+                        <div class="media-body">
+                            <strong class="data-fileEntry-type">USERDATA</strong>
+                            <p class="data-fileEntry-description">User Data</p>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="pane canvasWindow sidebar-2">
+                <canvas>Oops... soething went wrong!</canvas>
+            </div>
+
+            <div class="pane-sm sidebar sidebar-3 pane-render-settings" style="max-width: none;">
+
+                <h5 class="nav-group-title">Render Settings</h5>
+
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td>Camera-Type</td>
+                            <td>
+                                <select class="data-renderSettings-cameraType form-control">
+                                    <option value="orbit">Orbit</option>
+                                    <option value="fps">FPS</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <footer class="toolbar toolbar-footer">
+        <h1 class="title">Footer</h1>
+    </footer>
+</div>

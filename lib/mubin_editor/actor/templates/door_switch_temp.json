@@ -1,0 +1,409 @@
+{
+    "name": "Door - Switch (Temp.)",
+    "actors": [
+        {
+            "!Parameters": {
+                "DropTable": {
+                    "type": 160,
+                    "value": "Normal"
+                },
+                "SharpWeaponJudgeType": {
+                    "type": 209,
+                    "value": 0
+                }
+            },
+            "HashId": {
+                "type": 211,
+                "value": "{ID0}"
+            },
+            "LinksToObj": [
+                {
+                    "!Parameters": {
+                        "NoAutoDemoMember": {
+                            "type": 208,
+                            "value": false
+                        }
+                    },
+                    "DefinitionName": {
+                        "type": 160,
+                        "value": "BasicSig"
+                    },
+                    "DestUnitHashId": {
+                        "type": 211,
+                        "value": "{ID1}"
+                    }
+                }
+            ],
+            "SRTHash": {
+                "type": 209,
+                "value": -1306026101
+            },
+            "Translate": [
+                {
+                    "type": 210,
+                    "value": 0
+                },
+                {
+                    "type": 210,
+                    "value": 0
+                },
+                {
+                    "type": 210,
+                    "value": 0
+                }
+            ],
+            "UnitConfigName": {
+                "type": 160,
+                "value": "SwitchHit"
+            }
+        },
+        {
+            "!Parameters": {
+                "DropTable": {
+                    "type": 160,
+                    "value": "Normal"
+                },
+                "MoveAxis": {
+                    "type": 209,
+                    "value": 1
+                },
+                "MoveDis": {
+                    "type": 210,
+                    "value": 5
+                },
+                "MoveSpeed": {
+                    "type": 210,
+                    "value": 1
+                },
+                "SharpWeaponJudgeType": {
+                    "type": 209,
+                    "value": 0
+                }
+            },
+            "HashId": {
+                "type": 211,
+                "value": "{ID2}"
+            },
+            "Rotate": [
+                {
+                    "type": 210,
+                    "value": -0.7853981852531433
+                },
+                {
+                    "type": 210,
+                    "value": 0
+                },
+                {
+                    "type": 210,
+                    "value": 0
+                }
+            ],
+            "SRTHash": {
+                "type": 209,
+                "value": -1399163517
+            },
+            "Translate": [
+                {
+                    "type": 210,
+                    "value": 4
+                },
+                {
+                    "type": 210,
+                    "value": 0
+                },
+                {
+                    "type": 210,
+                    "value": 0
+                }
+            ],
+            "UnitConfigName": {
+                "type": 160,
+                "value": "DgnObj_BoxShutter_4x4x4"
+            }
+        },
+        {
+            "!Parameters": {
+                "IncrementSave": {
+                    "type": 208,
+                    "value": false
+                },
+                "MakeSaveFlag": {
+                    "type": 209,
+                    "value": 0
+                },
+                "NoChangeSignal": {
+                    "type": 208,
+                    "value": false
+                },
+                "SaveFlagOnOffType": {
+                    "type": 209,
+                    "value": 0
+                }
+            },
+            "HashId": {
+                "type": 211,
+                "value": "{ID5}"
+            },
+            "LinksToObj": [
+                {
+                    "!Parameters": {
+                        "NoAutoDemoMember": {
+                            "type": 208,
+                            "value": false
+                        }
+                    },
+                    "DefinitionName": {
+                        "type": 160,
+                        "value": "BasicSig"
+                    },
+                    "DestUnitHashId": {
+                        "type": 211,
+                        "value": "{ID0}"
+                    }
+                },
+                {
+                    "!Parameters": {
+                        "NoAutoDemoMember": {
+                            "type": 208,
+                            "value": false
+                        }
+                    },
+                    "DefinitionName": {
+                        "type": 160,
+                        "value": "BasicSig"
+                    },
+                    "DestUnitHashId": {
+                        "type": 211,
+                        "value": "{ID2}"
+                    }
+                }
+            ],
+            "SRTHash": {
+                "type": 209,
+                "value": 645132178
+            },
+            "Translate": [
+                {
+                    "type": 210,
+                    "value": 6
+                },
+                {
+                    "type": 210,
+                    "value": 0
+                },
+                {
+                    "type": 210,
+                    "value": 0
+                }
+            ],
+            "UnitConfigName": {
+                "type": 160,
+                "value": "LinkTagAnd"
+            }
+        },
+        {
+            "!Parameters": {
+                "IncrementSave": {
+                    "type": 208,
+                    "value": false
+                },
+                "MakeSaveFlag": {
+                    "type": 209,
+                    "value": 0
+                },
+                "NoChangeSignal": {
+                    "type": 208,
+                    "value": false
+                },
+                "SaveFlagOnOffType": {
+                    "type": 209,
+                    "value": 0
+                }
+            },
+            "HashId": {
+                "type": 211,
+                "value": "{ID1}"
+            },
+            "LinksToObj": [
+                {
+                    "!Parameters": {
+                        "NoAutoDemoMember": {
+                            "type": 208,
+                            "value": false
+                        }
+                    },
+                    "DefinitionName": {
+                        "type": 160,
+                        "value": "BasicSig"
+                    },
+                    "DestUnitHashId": {
+                        "type": 211,
+                        "value": "{ID3}"
+                    }
+                },
+                {
+                    "!Parameters": {
+                        "NoAutoDemoMember": {
+                            "type": 208,
+                            "value": false
+                        }
+                    },
+                    "DefinitionName": {
+                        "type": 160,
+                        "value": "BasicSig"
+                    },
+                    "DestUnitHashId": {
+                        "type": 211,
+                        "value": "{ID5}"
+                    }
+                }
+            ],
+            "SRTHash": {
+                "type": 209,
+                "value": 834570879
+            },
+            "Translate": [
+                {
+                    "type": 210,
+                    "value": 4
+                },
+                {
+                    "type": 210,
+                    "value": 0
+                },
+                {
+                    "type": 210,
+                    "value": 4
+                }
+            ],
+            "UnitConfigName": {
+                "type": 160,
+                "value": "LinkTagAnd"
+            }
+        },
+        {
+            "!Parameters": {
+                "DropTable": {
+                    "type": 160,
+                    "value": "Normal"
+                },
+                "SharpWeaponJudgeType": {
+                    "type": 209,
+                    "value": 0
+                },
+                "WaitTime": {
+                    "type": 210,
+                    "value": 15
+                }
+            },
+            "HashId": {
+                "type": 211,
+                "value": "{ID3}"
+            },
+            "LinksToObj": [
+                {
+                    "!Parameters": {
+                        "NoAutoDemoMember": {
+                            "type": 208,
+                            "value": false
+                        }
+                    },
+                    "DefinitionName": {
+                        "type": 160,
+                        "value": "BasicSig"
+                    },
+                    "DestUnitHashId": {
+                        "type": 211,
+                        "value": "{ID4}"
+                    }
+                }
+            ],
+            "SRTHash": {
+                "type": 209,
+                "value": -564017560
+            },
+            "Translate": [
+                {
+                    "type": 210,
+                    "value": 6
+                },
+                {
+                    "type": 210,
+                    "value": 0
+                },
+                {
+                    "type": 210,
+                    "value": 4
+                }
+            ],
+            "UnitConfigName": {
+                "type": 160,
+                "value": "SwitchTimeLag"
+            }
+        },
+        {
+            "!Parameters": {
+                "IncrementSave": {
+                    "type": 208,
+                    "value": false
+                },
+                "MakeSaveFlag": {
+                    "type": 209,
+                    "value": 0
+                },
+                "NoChangeSignal": {
+                    "type": 208,
+                    "value": false
+                },
+                "SaveFlagOnOffType": {
+                    "type": 209,
+                    "value": 0
+                }
+            },
+            "HashId": {
+                "type": 211,
+                "value": "{ID4}"
+            },
+            "LinksToObj": [
+                {
+                    "!Parameters": {
+                        "NoAutoDemoMember": {
+                            "type": 208,
+                            "value": false
+                        }
+                    },
+                    "DefinitionName": {
+                        "type": 160,
+                        "value": "BasicSig"
+                    },
+                    "DestUnitHashId": {
+                        "type": 211,
+                        "value": "{ID5}"
+                    }
+                }
+            ],
+            "SRTHash": {
+                "type": 209,
+                "value": 2098616312
+            },
+            "Translate": [
+                {
+                    "type": 210,
+                    "value": 6
+                },
+                {
+                    "type": 210,
+                    "value": 1.5
+                },
+                {
+                    "type": 210,
+                    "value": 4
+                }
+            ],
+            "UnitConfigName": {
+                "type": 160,
+                "value": "LinkTagNAnd"
+            }
+        }
+    ]
+}

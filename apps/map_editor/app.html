@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--
+            @copyright 2018 - Max Bebök
+            @author Max Bebök
+            @license GNU-GPLv3 - see the "LICENSE" file in the root directory
+        -->
+
+    <title>Ice-Spear - Map</title>
+
+    <link rel="stylesheet" href="./app.css" />
+
+    <base href="./../../">
+
+    <script src="apps/globals.js"></script>
+
+    <script src="lib/3d_renderer/lib/libs/stats.min.js"></script>
+
+    <link rel="stylesheet" href="css/photon.dark.css" data-theme="href" />
+    <link rel="stylesheet" href="css/theme.dark.css" data-theme="href" />
+
+    <link rel="stylesheet" href="node_modules/izitoast/dist/css/iziToast.min.css" />
+
+    <link rel="stylesheet" href="css/loader.css">
+    <link rel="stylesheet" href="css/split.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+</head>
+
+<body>
+    <div id="loader-container" hidden>
+        <div id="loader"></div>
+        <span class="data-status"></span>
+        <span class="data-info"></span>
+    </div>
+
+    <div class="window" id="mapWindow"> 
+        <canvas class="grabbable" width="1024" height="576" id="mapCanvas">Well... you should not see this, do you even have a GPU?</canvas>
+    </div>
+
+    <div id="mapOverlay">
+        <div class="dataColor-default size-numbers info-container">
+            <div>
+                <span class="dataLabel">X</span><span class="data-pos-x">0.0000</span>
+            </div>
+            <div>
+                <span class="dataLabel">Z</span><span class="data-pos-y">0.0000</span>
+            </div>
+        </div>
+
+        <div class="dataColor-marker size-numbers info-container">
+            <div>
+                <span class="dataLabel">X</span><span class="data-marker-x">0.0000</span>
+            </div>
+            <div>
+                <span class="dataLabel">Z</span><span class="data-marker-y">0.0000</span>
+            </div>
+        </div>
+
+        <div class="info-container size-numbers">
+            <div class="dataColor-marker">
+                <span class="dataLabel">Section</span><span class="data-fieldSection">?-?</span>
+            </div>
+            <div class="dataColor-shrine">
+                <span class="dataLabel">Shrine&nbsp;</span><span class="data-shrine">Dungeon???</span>
+            </div>
+        </div>
+
+        <div class="info-container">
+            <div><button disabled class="tool-fieldSection-open btn btn-large btn-default">Open Section</button></div>
+            <div><button disabled class="tool-shrine-open btn btn-large btn-default">Open Shrine</button></div>
+        </div>
+    </div>
+</body>
+
+</html>

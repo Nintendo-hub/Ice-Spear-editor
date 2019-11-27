@@ -1,0 +1,18 @@
+# Local configs
+/config.json
+
+# Installed node packages
+node_modules/
+/db/
+
+# C/C++ / electron build directories
+build/
+dist/
+
+# Visual Studio
+.vs/
+.vscode/
+
+# Intellij project settings
+.idea/
+*.iml

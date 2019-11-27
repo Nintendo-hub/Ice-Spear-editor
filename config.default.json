@@ -1,0 +1,26 @@
+{
+    "game": {
+        "path": null
+    },
+    "editor": {
+    },
+    "projects": {
+        "path": "",
+        "lastOpened" : [
+            
+        ]
+    },
+    "fieldEditor": {
+        "loadModel": true
+    },
+    "cache": {
+        "terrainTextures": true,
+        "actors": true
+    },
+    "mubinEditor": {
+        "keys": {
+            "selectRight": true,
+            "selectMiddle": false
+        }
+    }
+}

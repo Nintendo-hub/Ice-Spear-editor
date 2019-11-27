@@ -1,0 +1,22 @@
+{
+    "1"   : {"name": "GX2_PRIMITIVE_POINTS",                    "elements": 1, "increment": 1},
+    "2"   : {"name": "GX2_PRIMITIVE_LINES",                     "elements": 2, "increment": 2},
+    "3"   : {"name": "GX2_PRIMITIVE_LINE_STRIP",                "elements": 2, "increment": 1},
+    "4"   : {"name": "GX2_PRIMITIVE_TRIANGLES",                 "elements": 3, "increment": 3},
+    "5"   : {"name": "GX2_PRIMITIVE_TRIANGLE_FAN",              "elements": 3, "increment": 1},
+    "6"   : {"name": "GX2_PRIMITIVE_TRIANGLE_STRIP",            "elements": 3, "increment": 1},
+    "10"  : {"name": "GX2_PRIMITIVE_LINES_ADJACENCY",           "elements": 4, "increment": 4},
+    "11"  : {"name": "GX2_PRIMITIVE_LINE_STRIP_ADJACENCY",      "elements": 4, "increment": 1},
+    "12"  : {"name": "GX2_PRIMITIVE_TRIANGLES_ADJACENCY",       "elements": 6, "increment": 6},
+    "13"  : {"name": "GX2_PRIMITIVE_TRIANGLE_STRIP_ADJACENCY",  "elements": 6, "increment": 2},
+    "17"  : {"name": "GX2_PRIMITIVE_RECTS",                     "elements": 3, "increment": 3},
+    "18"  : {"name": "GX2_PRIMITIVE_LINE_LOOP",                 "elements": 2, "increment": 1},
+    "19"  : {"name": "GX2_PRIMITIVE_QUADS",                     "elements": 4, "increment": 4},
+    "20"  : {"name": "GX2_PRIMITIVE_QUAD_STRIP",                "elements": 4, "increment": 2},
+    "130" : {"name": "GX2_PRIMITIVE_TESSELLATE_LINES",          "elements": 2, "increment": 2},
+    "131" : {"name": "GX2_PRIMITIVE_TESSELLATE_LINE_STRIP",     "elements": 2, "increment": 1},
+    "132" : {"name": "GX2_PRIMITIVE_TESSELLATE_TRIANGLES",      "elements": 3, "increment": 3},
+    "134" : {"name": "GX2_PRIMITIVE_TESSELLATE_TRIANGLE_STRIP", "elements": 3, "increment": 1},
+    "147" : {"name": "GX2_PRIMITIVE_TESSELLATE_QUADS",          "elements": 4, "increment": 4},
+    "148" : {"name": "GX2_PRIMITIVE_TESSELLATE_QUAD_STRIP",     "elements": 4, "increment": 2}
+}

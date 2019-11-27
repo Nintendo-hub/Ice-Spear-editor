@@ -1,0 +1,21 @@
+{
+    "magic"  : {"type" : "string", "length": 4, "checkValue": "AAMP", "default": "AAMP"},
+    "version": {"type": "u32", "default": 2},
+    "__UNKNOWN_0_": {"type": "u32", "default": 3},
+
+    "fileSize": {"type": "u32", "comment": "whole file size"},
+    "__UNKNOWN_1_": {"type": "u32", "default": 0},
+
+    "formatNameLength": {"type": "u32", "default": 4},
+
+    "rootNodesCount"     : {"type": "u32"},
+    "rootChildNodesCount": {"type": "u32"},
+    "nodesCount"         : {"type": "u32"},
+
+    "dataBufferSize"   : {"type": "u32"},
+    "stringBufferSize" : {"type": "u32"},
+
+    "__UNKNOWN_2_": {"type": "u32", "default": 0},
+
+    "formatName" : {"type": "string", "length": "formatNameLength", "default": "xml"}
+}

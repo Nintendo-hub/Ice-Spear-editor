@@ -1,0 +1,28 @@
+/**
+* @copyright 2018 - Max Bebök
+* @author Max Bebök
+* @license GNU-GPLv3 - see the "LICENSE" file in the root directory
+*/
+
+.loaded
+{
+    background-color: rgb(216, 216, 216);
+    __color: black;
+}
+
+.list-group-item:hover
+{
+    background-color: #116cd6;
+    color: white;
+}
+
+table tr.active
+{
+    background-color: rgba(127, 226, 126, 0.28);
+}
+
+.window .bg-checkerboard
+{
+    background-image: url("./../assets/img/checkerboard.light.png");
+    transition: background-image .5s ease-in-out;
+}

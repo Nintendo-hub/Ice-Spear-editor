@@ -1,0 +1,195 @@
+{
+    "name": "Dungeon Exit",
+    "actors": [
+        {
+            "!Parameters": {
+                "DropTable": {
+                    "type": 160,
+                    "value": "Normal"
+                },
+                "RemainsTerminalIndex": {
+                    "type": 209,
+                    "value": -1
+                },
+                "RemainsTerminalType": {
+                    "type": 209,
+                    "value": -1
+                },
+                "SharpWeaponJudgeType": {
+                    "type": 209,
+                    "value": 0
+                }
+            },
+            "HashId": {
+                "type": 211,
+                "value": "${ID0}"
+            },
+            "LinksToObj": [
+                {
+                    "!Parameters": {
+                        "NoAutoDemoMember": {
+                            "type": 208,
+                            "value": false
+                        }
+                    },
+                    "DefinitionName": {
+                        "type": 160,
+                        "value": "BasicSig"
+                    },
+                    "DestUnitHashId": {
+                        "type": 211,
+                        "value": "${ID1}"
+                    }
+                }
+            ],
+            "OnlyOne": {
+                "type": 208,
+                "value": true
+            },
+            "Rotate": {
+                "type": 210,
+                "value": -1.5707963705062866
+            },
+            "SRTHash": {
+                "type": 209,
+                "value": 1456738101
+            },
+            "Scale": {
+                "type": 210,
+                "value": 0.9236351251602173
+            },
+            "Translate": [
+                {
+                    "type": 210,
+                    "value": 0
+                },
+                {
+                    "type": 210,
+                    "value": 0
+                },
+                {
+                    "type": 210,
+                    "value": 0
+                }
+            ],
+            "UnitConfigName": {
+                "type": 160,
+                "value": "DgnObj_GoalExit"
+            }
+        },
+        {
+            "!Parameters": {
+                "IncrementSave": {
+                    "type": 208,
+                    "value": false
+                },
+                "MakeSaveFlag": {
+                    "type": 209,
+                    "value": 0
+                },
+                "NoChangeSignal": {
+                    "type": 208,
+                    "value": false
+                },
+                "SaveFlagOnOffType": {
+                    "type": 209,
+                    "value": 0
+                }
+            },
+            "HashId": {
+                "type": 211,
+                "value": "${ID1}"
+            },
+            "LinksToObj": [
+                {
+                    "!Parameters": {
+                        "NoAutoDemoMember": {
+                            "type": 208,
+                            "value": false
+                        }
+                    },
+                    "DefinitionName": {
+                        "type": 160,
+                        "value": "BasicSig"
+                    },
+                    "DestUnitHashId": {
+                        "type": 211,
+                        "value": "${ID2}"
+                    }
+                }
+            ],
+            "SRTHash": {
+                "type": 209,
+                "value": 0
+            },
+            "Translate": [
+                {
+                    "type": 210,
+                    "value": 2
+                },
+                {
+                    "type": 210,
+                    "value": 0
+                },
+                {
+                    "type": 210,
+                    "value": 0
+                }
+            ],
+            "UnitConfigName": {
+                "type": 160,
+                "value": "LinkTagOr"
+            }
+        },
+        {
+            "!Parameters": {
+                "EventFlowEntryName": {
+                    "type": 160,
+                    "value": "GoalExit"
+                },
+                "EventFlowName": {
+                    "type": 160,
+                    "value": "Demo033_1"
+                },
+                "IsEndlessEvent": {
+                    "type": 208,
+                    "value": false
+                },
+                "LaunchEventByOffSignal": {
+                    "type": 208,
+                    "value": false
+                },
+                "LaunchEventByOnSignal": {
+                    "type": 208,
+                    "value": true
+                }
+            },
+            "HashId": {
+                "type": 211,
+                "value": "${ID2}"
+            },
+            "SRTHash": {
+                "type": 209,
+                "value": 1598203203
+            },
+            "Translate": [
+                {
+                    "type": 210,
+                    "value": 2
+                },
+                {
+                    "type": 210,
+                    "value": 1.5
+                },
+                {
+                    "type": 210,
+                    "value": 0
+                }
+            ],
+            "UnitConfigName": {
+                "type": 160,
+                "value": "EventTag"
+            }
+        }
+    ]
+}

@@ -1,0 +1,93 @@
+{
+    "magic"   : {"type" : "string", "length": 4, "checkValue": "FMDL"},
+
+    "fileNameOffset" : {"type" : "s32", "addValue": "@offset"},
+    "filePathOffset" : {"type" : "s32", "addValue": "@offset"},
+
+    "fsklOffset"     : {"type" : "s32", "addValue": "@offset"},
+    "fvtxOffset"     : {"type" : "s32", "addValue": "@offset"},
+    "fshpOffset"     : {"type" : "s32", "addValue": "@offset"},
+    "fmatOffset"     : {"type" : "s32", "addValue": "@offset"},
+    "userDataOffset" : {"type" : "s32", "addValue": "@offset"},
+
+    "fvtxCount"     : {"type" : "u16"},
+    "fshpCount"     : {"type" : "u16"},
+    "fmatCount"     : {"type" : "u16"},
+    "userDataCount" : {"type" : "u16"},
+
+    "vertexCount"     : {"type" : "u32"},
+    "userPointer"     : {"type" : "u32", "addValue": "@offset"},
+
+    "fileNameLength" : {"type": "s32",    "offset": "fileNameOffset", "addOffset": -4},
+    "fileName"       : {"type": "string", "offset": "fileNameOffset", "length": "fileNameLength"},
+
+    "filePathLength" : {"type": "s32",    "offset": "filePathOffset", "addOffset": -4},
+    "filePath"       : {"type": "string", "offset": "filePathOffset", "length": "filePathLength"},
+
+    "fvtxData": { "type": "structure", "setOffset": "fvtxOffset", "count": "fvtxCount",
+        "structure": {
+            "magic" : {"type" : "string", "length": 4},
+            "attributeCount"  : {"type": "u8"},
+            "bufferCount"     : {"type": "u8"},
+            "sectionIndex"    : {"type": "u16"},
+            "vertexCount"     : {"type": "u32"},
+            "vertexSkinCount" : {"type": "u8"},
+            "__PADDING__" : {"type": "u8", "count": 3},
+
+            "attributeArrayOffset"      : {"type": "s32", "addValue": "@offset"},
+            "attributeIndexGroupOffset" : {"type": "s32", "addValue": "@offset"},
+            "bufferOffset"              : {"type": "s32", "addValue": "@offset"},
+            "userPointer"               : {"type": "u32"},
+
+            "buffer": { "type": "structure", "setOffset": "bufferOffset", "count": "bufferCount", "restoreOffset": true,
+                "structure": {
+                    "dataPointer"    : {"type": "u32", "defult": 0},
+                    "size"           : {"type": "u32"},
+                    "bufferHandle"   : {"type": "u32", "default": 0},
+                    "stride"         : {"type": "u16"},
+                    "bufferingCount" : {"type": "u16", "default": 1},
+                    "contextPointer" : {"type": "u32", "default": 0},
+                    "dataOffset"     : {"type": "s32", "addValue": "@offset"},
+
+                    "buffer" : {"type": "buffer", "length": "size", "offset": "dataOffset"}
+                }
+            },
+
+            "attributes": { "type": "structure", "setOffset": "attributeArrayOffset", "count": "attributeCount", "restoreOffset": true,
+                "structure": {
+                    "nameOffset"   : {"type" : "s32", "addValue": "@offset"},
+                    "bufferIndex"  : {"type" : "u8"},
+                    "__PADDING__"  : {"type" : "u8"},
+                    "bufferOffset" : {"type" : "u16", "comment": "is relative?"},
+                    "format"       : {"type" : "u32"},
+
+                    "nameLength" : {"type": "s32",    "offset": "nameOffset", "addOffset": -4},
+                    "name"       : {"type": "string", "offset": "nameOffset", "length": "nameLength"}
+                }
+            }
+        }
+    },
+
+    "fshpIndex": { "type": "structure", "setOffset": "fshpOffset", "count": 1, "comment": "fshp & fmat point to the same table, but on diff. offsets",
+        "structure": {
+            "length" : {"type": "u32"},
+            "entryNum": {"type": "s32", "addValue": 1},
+
+            "entries": { "type": "structure", "count": "entryNum",
+                "structure": "./lib/bfres/index_entry.json"
+            }
+        }
+    },
+
+    "fmatIndex": { "type": "structure", "setOffset": "fmatOffset", "count": 1, "comment": "fshp & fmat point to the same table, but on diff. offsets",
+        "structure": {
+            "length" : {"type": "u32"},
+            "entryNum": {"type": "s32", "addValue": 1},
+
+            "entries": { "type": "structure", "count": "entryNum",
+                "structure": "./lib/bfres/index_entry.json"
+            }
+        }
+    }
+
+}

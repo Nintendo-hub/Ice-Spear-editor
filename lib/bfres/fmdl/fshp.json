@@ -1,0 +1,58 @@
+{
+    "magic" : {"type" : "string", "length": 4, "checkValue": "FSHP"},
+    "polyNameOffset" : {"type" : "s32", "addValue": "@offset"},
+    "polyName" : {"type" : "string", "offset": "polyNameOffset"},
+    "flags" : {"type" : "u32"},
+
+    "fvtxIndex"      : {"type": "u16"},
+    "fmatIndex"      : {"type": "u16"},
+    "fsklIndex"      : {"type": "u16"},
+    "sectionIndex"   : {"type": "u16", "comment": "wiki is maybe wrong, shows also fvtx here"},
+    "boneSkinIndex"  : {"type": "u16"},
+    "vertexSkinCount": {"type": "u8"},
+
+    "lodModelCount"  : {"type": "u8"},
+    "keyShapeCount"  : {"type": "u8", "default": 0},
+    "targetAttrCount": {"type": "u8", "default": 0},
+
+    "visibilityTreeCount"  : {"type": "u16"},
+    "radiusBoundingSphere" : {"type": "u32"},
+
+    "fvtxBufferOffset" : {"type": "s32", "addValue": "@offset"},
+    "lodModelOffset"   : {"type": "s32", "addValue": "@offset"},
+    "fsklIndexOffset"  : {"type": "s32", "addValue": "@offset"},
+    "keyShapeOffset"   : {"type": "s32", "addValue": "@offset", "default": 0},
+
+    "visibilityGroupNodeOffset"  : {"type": "s32", "addValue": "@offset"},
+    "visibilityGroupRangeOffset" : {"type": "s32", "addValue": "@offset"},
+    "visibilityGroupIndexOffset" : {"type": "s32", "addValue": "@offset"},
+
+    "userPointer": {"type": "u32", "default": 0},
+
+    "lodModel": { "type": "structure", "setOffset": "lodModelOffset", "count": "lodModelCount",
+        "structure": {
+            "primitypeType" : {"type": "u32"},
+            "indexFormat"   : {"type": "u32"},
+            "pointCount"    : {"type": "u32"},
+            "visibilityGroupCount"  : {"type": "u16"},
+            "__PADING__"            : {"type": "u8", "count": 2},
+            "visibilityGroupOffset" : {"type": "s32", "addValue": "@offset"},
+            "indexBufferOffset"     : {"type": "s32", "addValue": "@offset"},
+            "vertexSkipCount"       : {"type": "u32"},
+
+            "indexBuffer": { "type": "structure", "setOffset": "indexBufferOffset", "restoreOffset": true,
+                "structure": {
+                    "dataPointer"    : {"type": "u32", "default": 0},
+                    "size"           : {"type": "u32"},
+                    "bufferHandle"   : {"type": "u32", "default": 0},
+                    "stride"         : {"type": "u16"},
+                    "bufferingCount" : {"type": "u16", "default": 1},
+                    "contextPointer" : {"type": "u32", "default": 0},
+                    "dataOffset"     : {"type": "s32", "addValue": "@offset"},
+
+                    "buffer" : {"type": "buffer", "length": "size", "offset": "dataOffset"}
+                }
+            }
+        }
+    }
+}

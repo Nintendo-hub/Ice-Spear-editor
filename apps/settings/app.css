@@ -1,0 +1,46 @@
+.tab-content
+{
+    margin: 10px 15px;
+}
+
+.drag-drop-dir input
+{
+    width: calc(100% - 70px);
+}
+
+.tab-content button
+{
+    margin-bottom: 2px;
+    height: 32px;
+}
+
+.small-info-text 
+{
+    font-size: 12px;
+    opacity: 0.6;
+    margin-left: 4px;
+}
+
+.note-span
+{
+    margin-left: 68px;
+}
+
+.settings-container
+{
+    margin-bottom: 10px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #40404a;
+}
+
+.settings-container:last-child
+{
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border: 0;
+}
+
+.container-fileSize
+{
+    margin-bottom: 8px;
+}

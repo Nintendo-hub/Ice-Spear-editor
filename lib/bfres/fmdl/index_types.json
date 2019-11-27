@@ -1,0 +1,6 @@
+{
+    "0": {"name": "GX2_INDEX_FORMAT_U16_LE", "type": "u16", "endian": "little"},
+    "1": {"name": "GX2_INDEX_FORMAT_U32_LE", "type": "u32", "endian": "little"},
+    "4": {"name": "GX2_INDEX_FORMAT_U16",    "type": "u16", "endian": "big"},
+    "9": {"name": "GX2_INDEX_FORMAT_U32",    "type": "u32", "endian": "big"}
+}

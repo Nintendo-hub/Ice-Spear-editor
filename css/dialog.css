@@ -1,0 +1,40 @@
+body .swal2-popup 
+{
+    font-size: 10px;
+    background: #2a2e33;
+    box-shadow: #0c0c0c 0px 0px 17px 2px;
+}
+
+body .swal2-popup .swal2-title
+{
+    color: #9da5b4;
+    font-size: 1.5em;
+    margin: 0
+}
+
+body .swal2-popup .swal2-styled.swal2-cancel
+{
+    background-color: #676767;
+}
+
+body .swal2-icon.swal2-question
+{
+    color: #41a1e1;
+    border-color: #41a1e1;
+}
+
+body .swal2-popup .swal2-close
+{
+    color: #616161;
+}
+
+body .swal2-popup .swal2-input
+{
+    height: 2em;
+    width: calc(100% - 2em);
+}
+
+body .swal2-popup .swal2-content 
+{
+    color: #7d8188;
+}

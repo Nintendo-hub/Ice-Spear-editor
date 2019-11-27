@@ -1,0 +1,10 @@
+{
+    "0": {"name": "GX2_SURFACE_DIM_1D"},
+    "1": {"name": "GX2_SURFACE_DIM_2D"},
+    "2": {"name": "GX2_SURFACE_DIM_3D"},
+    "3": {"name": "GX2_SURFACE_DIM_CUBE"},
+    "4": {"name": "GX2_SURFACE_DIM_1D_ARRAY"},
+    "5": {"name": "GX2_SURFACE_DIM_2D_ARRAY"},
+    "6": {"name": "GX2_SURFACE_DIM_2D_MSAA"},
+    "7": {"name": "GX2_SURFACE_DIM_2D_MSAA_ARRAY"}
+}

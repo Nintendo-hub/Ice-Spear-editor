@@ -1,0 +1,20 @@
+{
+    "magic"   : {"type" : "string", "length": 4, "checkValue": "FRES"},
+    "version" : {"type" : "u8", "count" : 4},
+    "bom"     : {"type" : "bom"},
+
+    "headerLength"   : {"type" : "u16"},
+    "fileLength"     : {"type" : "u32"},
+    "fileAlignment"  : {"type" : "u32"},
+    "fileNameOffset" : {"type" : "s32", "addValue": "@offset"},
+
+    "stringTableLength" : {"type" : "s32"},
+    "stringTableOffset" : {"type" : "s32", "addValue": "@offset"},
+
+    "fileOffsets" : {"type": "s32", "count": 12, "addValue": "@offset" },
+    "fileCounts"  : {"type": "u16", "count": 12},
+    "userPointer" : {"type" : "u32", "defult": 0},
+
+    "fileNameLength" : {"type": "s32", "offset": "fileNameOffset", "addOffset": -4},
+    "fileName"       : {"type": "string", "offset": "fileNameOffset", "length": "fileNameLength"}
+}

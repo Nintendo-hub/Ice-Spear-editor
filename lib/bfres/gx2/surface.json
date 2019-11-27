@@ -1,0 +1,29 @@
+{
+    "dimensionType" : {"type": "u32"},
+    "sizeX"         : {"type": "u32"},
+    "sizeY"         : {"type": "u32"},
+    "sizeZ"         : {"type": "u32"},
+    "mipmapCount"   : {"type": "u32"},
+    "textureFormat" : {"type": "u32"},
+    "sampleNum"     : {"type": "u32"},
+    "usage"         : {"type": "u32"},
+    "dataSize"      : {"type": "u32"},
+    "dataOffset"    : {"type": "u32"},
+
+    "mipmapSize"    : {"type": "u32"},
+    "mipmapOffset"  : {"type": "u32", "addValue": "@offset"},
+    "tileMode"      : {"type": "u32"},
+    "swizzleValue"  : {"type": "u32"},
+    "alignment"     : {"type": "u32", "default": 4096},
+    "pitch"         : {"type": "u32"},
+    "mipmapOffsets" : {"type": "u32", "count": 13, "addValue": "@offset"},
+    "firstMipmap"   : {"type": "u32"},
+    "mipmapCount2"  : {"type": "u32", "comment": "same as 'mipmapCount', but better"},
+
+    "firstSlice"    : {"type": "u32", "default": 0},
+    "sliceCount"    : {"type": "u32", "default": 1},
+
+    "components"    : {"type": "u8", "count": 4},
+
+    "registers"     : {"type": "u32", "count": 5}
+}

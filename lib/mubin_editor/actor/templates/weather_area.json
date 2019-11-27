@@ -1,0 +1,241 @@
+{
+    "name": "Area - Weather",
+    "actors": [
+        {
+            "!Parameters": {
+                "AutoSave": {
+                    "type": 208,
+                    "value": false
+                },
+                "CameraPriority": {
+                    "type": 209,
+                    "value": 1
+                },
+                "CameraSet": {
+                    "type": 160,
+                    "value": "-"
+                },
+                "ForceCalcInEvent": {
+                    "type": 208,
+                    "value": false
+                },
+                "Shape": {
+                    "type": 160,
+                    "value": "Box"
+                }
+            },
+            "HashId": {
+                "type": 211,
+                "value": "{ID0}"
+            },
+            "LinksToObj": [
+                {
+                    "!Parameters": {
+                        "NoAutoDemoMember": {
+                            "type": 208,
+                            "value": false
+                        }
+                    },
+                    "DefinitionName": {
+                        "type": 160,
+                        "value": "BasicSig"
+                    },
+                    "DestUnitHashId": {
+                        "type": 211,
+                        "value": "{ID1}"
+                    }
+                }
+            ],
+            "Rotate": [
+                {
+                    "type": 210,
+                    "value": 0
+                },
+                {
+                    "type": 210,
+                    "value": 0
+                },
+                {
+                    "type": 210,
+                    "value": 0
+                }
+            ],
+            "SRTHash": {
+                "type": 209,
+                "value": -105676283
+            },
+            "Scale": {
+                "type": 210,
+                "value": 5
+            },
+            "Translate": [
+                {
+                    "type": 210,
+                    "value": 0
+                },
+                {
+                    "type": 210,
+                    "value": 0
+                },
+                {
+                    "type": 210,
+                    "value": 0
+                }
+            ],
+            "UnitConfigName": {
+                "type": 160,
+                "value": "Area"
+            }
+        },
+        {
+            "!Parameters": {
+                "IncrementSave": {
+                    "type": 208,
+                    "value": false
+                },
+                "MakeSaveFlag": {
+                    "type": 209,
+                    "value": 0
+                },
+                "NoChangeSignal": {
+                    "type": 208,
+                    "value": false
+                },
+                "SaveFlagOnOffType": {
+                    "type": 209,
+                    "value": 0
+                }
+            },
+            "HashId": {
+                "type": 211,
+                "value": "{ID1}"
+            },
+            "LinksToObj": [
+                {
+                    "DefinitionName": {
+                        "type": 160,
+                        "value": "AreaCol"
+                    },
+                    "DestUnitHashId": {
+                        "type": 211,
+                        "value": "{ID0}"
+                    }
+                },
+                {
+                    "DefinitionName": {
+                        "type": 160,
+                        "value": "BasicSig"
+                    },
+                    "DestUnitHashId": {
+                        "type": 211,
+                        "value": "{ID2}"
+                    }
+                }
+            ],
+            "SRTHash": {
+                "type": 209,
+                "value": 978075651
+            },
+            "Translate": [
+                {
+                    "type": 210,
+                    "value": 0
+                },
+                {
+                    "type": 210,
+                    "value": 0
+                },
+                {
+                    "type": 210,
+                    "value": 0
+                }
+            ],
+            "UnitConfigName": {
+                "type": 160,
+                "value": "LinkTagAnd"
+            }
+        },
+        {
+            "!Parameters": {
+                "BluffThunderOff": {
+                    "type": 208,
+                    "value": false
+                },
+                "CloudShadowOff": {
+                    "type": 208,
+                    "value": false
+                },
+                "FogMinusCorrection": {
+                    "type": 208,
+                    "value": false
+                },
+                "IgnitedLevel": {
+                    "type": 209,
+                    "value": 0
+                },
+                "PSelSpeed": {
+                    "type": 209,
+                    "value": 2
+                },
+                "PaletteSel": {
+                    "type": 209,
+                    "value": 6
+                },
+                "TemperatureDay": {
+                    "type": 210,
+                    "value": 99999.8984375
+                },
+                "TemperatureDirectDay": {
+                    "type": 210,
+                    "value": 99999.8984375
+                },
+                "TemperatureDirectNight": {
+                    "type": 210,
+                    "value": 99999.8984375
+                },
+                "TemperatureNight": {
+                    "type": 210,
+                    "value": 99999.8984375
+                },
+                "Weather": {
+                    "type": 209,
+                    "value": 3
+                },
+                "WeatherEff": {
+                    "type": 209,
+                    "value": 6
+                }
+            },
+            "HashId": {
+                "type": 211,
+                "value": "{ID2}"
+            },
+            "SRTHash": {
+                "type": 209,
+                "value": -1634178849
+            },
+            "Scale": {
+                "type": 210,
+                "value": 1
+            },
+            "Translate": [
+                {
+                    "type": 210,
+                    "value": 0
+                },
+                {
+                    "type": 210,
+                    "value": 1.5
+                },
+                {
+                    "type": 210,
+                    "value": 0
+                }
+            ],
+            "UnitConfigName": {
+                "type": 160,
+                "value": "ChangeWeatherTag"
+            }
+        }
+    ]
+}

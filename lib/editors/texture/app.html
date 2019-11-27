@@ -1,0 +1,100 @@
+<div class="window app-texture-editor">
+    <style>
+
+        .window .app-texture-editor .canvasWindow
+        {
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }
+
+        .app-texture-editor canvas
+        {
+            object-fit: contain;
+            width : 100%;
+            height: 100%;
+        }
+
+        .app-texture-editor select.data-tool-index
+        {
+            width: 60px;
+        }
+    </style>
+
+    <header class="toolbar toolbar-header">
+        <h1 class="title">Texture Editor</h1>
+    </header>
+
+    <div class="window-content">
+        <div class="pane-group">
+            <div class="pane-sm sidebar sidebar-1" style="max-width: none;">
+
+                <h5 class="nav-group-title">Texture - Header</h5>
+
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td>Name</td>
+                            <td class="data-header-fileName">-</td>
+                        </tr>
+                        <tr>
+                            <td>Path</td>
+                            <td class="data-header-filePath">-</td>
+                        </tr>
+                        <tr>
+                            <td>Width</td>
+                            <td class="data-header-sizeX">-</td>
+                        </tr>
+                        <tr>
+                            <td>Height</td>
+                            <td class="data-header-sizeY">-</td>
+                        </tr>
+                        <tr>
+                            <td>Depth</td>
+                            <td class="data-header-sizeZ">-</td>
+                        </tr>
+                        <tr>
+                            <td>Mipmaps</td>
+                            <td class="data-header-mipmapCount">-</td>
+                        </tr>
+                        <tr>
+                            <td>Format</td>
+                            <td class="data-header-textureFormat">-</td>
+                        </tr>
+                        <tr>
+                            <td>Channels</td>
+                            <td class="data-header-colorChannels">-</td>
+                        </tr>
+                        <tr>
+                            <td>Embedded Info</td>
+                            <td class="data-header-embededInfo">-</td>
+                        </tr>
+                        <tr>
+                            <td>Displayed-Index</td>
+                            <td>
+                                <select class="data-tool-index">
+                                    <option vlaue="0">0</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h5 class="nav-group-title">Tools</h5>
+
+                <nav class="nav-group">
+                    <span class="nav-group-item">
+                        <button class="btn btn btn-default data-tool-exportPNG">Export as PNG</button>
+                    </span>
+                </nav>
+
+            </div>
+            <div class="pane canvasWindow bg-checkerboard sidebar-2">
+                <canvas>Oops... you shouldn't see that message</canvas>
+            </div>
+        </div>
+    </div>
+
+    <footer class="toolbar toolbar-footer">
+        <h1 class="title">Footer</h1>
+    </footer>
+</div>

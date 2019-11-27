@@ -1,0 +1,153 @@
+/**
+* @copyright 2018 - Max Bebök
+* @author Max Bebök
+* @license GNU-GPLv3 - see the "LICENSE" file in the root directory
+*/
+
+@font-face 
+{
+    font-family: "open-sans";
+    src: url("../fonts/open_sans/OpenSans-Bold.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face 
+{
+    font-family: "overpass-mono";
+    src: url("../fonts/overpass_mono/OverpassMono-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.hidden
+{
+    display: none;
+}
+
+.no-user-select {
+    -webkit-user-select: none;
+}
+
+.window #main-sidebar-right
+{
+    background-image: url("./../assets/img/bg/ice_spear_blue.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom right;
+
+}
+
+.window td, .window th
+{
+    __user-select: initial;
+}
+
+.window .sidebar
+{
+    overflow-x: auto;
+    overflow-y: auto;
+    min-width: 0;
+}
+
+.window .list-group-scroll
+{
+    overflow-x: auto;
+}
+
+.window .list-group-item
+{
+    opacity: 1;
+    transition: background-color .15s ease-in-out, color .15s ease-in-out, filter 0.15s ease-in-out;
+}
+
+.window .list-group-item .text-light
+{
+    opacity: 0.7;
+    margin-left: 2px;
+}
+
+.window .toolbar-actions button,
+.window .toolbar-actions button span
+{
+    cursor: pointer;
+}
+
+.hex-editor td, .hex-editor th
+{
+    padding: 2px 6px;
+    text-align: center;
+}
+
+.window .form-control.dynamic-input
+{
+    margin: 6px;
+    width: calc(100% - 12px);
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    opacity: 0.0;
+    background-color: #151515;
+    color: #fff;
+    text-align: center;
+    border: 1px solid #929292;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    position: absolute;
+    z-index: 100;
+    transition: opacity 0.25s 0.5s ease;
+}
+
+.tooltip:hover .tooltiptext 
+{
+    visibility: visible;
+    opacity: 1.0;
+}
+
+/** fluent transition between themes **/
+.window,
+.window table.table tbody,
+.window input.form-control,
+.window .sidebar,
+.window .toolbar-actions,
+.window header.toolbar,
+.window button.btn,
+
+::-webkit-scrollbar,
+::-webkit-scrollbar-corner,
+::-webkit-scrollbar-thumb:window-inactive,
+::-webkit-scrollbar-thumb
+{
+    transition: background-image .5s cubic-bezier(0.5,0.5, 1,1),
+                background-color .5s cubic-bezier(0.5,0.5, 1,1),
+                border-color     .5s cubic-bezier(0.5,0.5, 1,1),
+                filter           .5s cubic-bezier(0.5,0.5, 1,1);
+}
+
+.window .list-group-item
+{
+    transition: border-color .5s cubic-bezier(0.5,0.5, 1,1);
+}
+
+.slider
+{
+    -webkit-appearance: none;
+    border: 1px solid #1b1b1b;
+    background-color: #2f2f2f;
+    height: 16px;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 10px; /* Set a specific slider handle width */
+    height: 16px; /* Slider handle height */
+    background: #e2c08d; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+.window .btn-group.ui-history-controls {
+    margin-left: 32px;
+}

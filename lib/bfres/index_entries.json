@@ -1,0 +1,8 @@
+{
+    "length"   : {"type" : "u32"},
+    "entryNum" : {"type" : "s32", "addValue": 1},
+
+    "entries": { "type": "structure", "count": "entryNum",
+        "structure": "./lib/bfres/index_entry.json"
+    }
+}

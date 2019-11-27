@@ -1,0 +1,44 @@
+{
+    "magicNum" : {"type" : "u8", "checkValue": 127},
+    "magic"    : {"type" : "string", "length": 3, "checkValue": "ELF"},
+
+    "__systemBits"   : {"type": "u8"},
+    "__endian"       : {"type": "u8"},
+    "__version"      : {"type": "u8"},
+    "__targetSystem" : {"type": "u8"},
+    "__abiVersion"   : {"type": "u8"},
+    "__PADDING_0__"  : {"type": "u8", "count": 7},
+
+    "type"        : {"type": "u16"},
+    "machine"     : {"type": "u16"},
+    "version"     : {"type": "u32"},
+    "entryOffset" : {"type": "u32"},
+
+    "progHeaderOffset"    : {"type": "u32"},
+    "sectionHeaderOffset" : {"type": "u32"},
+    "flags"               : {"type": "u32"},
+    
+    "entryHeaderSize" : {"type": "u16"},
+    "progHeaderSize"  : {"type": "u16"},
+    "progCount"       : {"type": "u16"},
+
+    "sectionHeaderSize"  : {"type": "u16"},
+    "sectionCount"       : {"type": "u16"},
+    "sectionHeaderIndex" : {"type": "u16"},
+
+    "sections" : {"type": "structure", "setOffset": "sectionHeaderOffset", "count": "sectionCount",
+        "structure": {
+            "name" 	  : {"type" : "u32"},
+            "type" 	  : {"type" : "u32"},
+            "flags"   : {"type" : "u32"},
+            "address" : {"type" : "u32"},
+            "offset"  : {"type" : "u32"},
+            "size"    : {"type" : "u32"},
+            "link"    : {"type" : "u32"},
+            "info"    : {"type" : "u32"},
+        
+            "addressAlignment" : {"type" : "u32"},
+            "entrySize"  	   : {"type" : "u32"}
+        }
+    }
+}

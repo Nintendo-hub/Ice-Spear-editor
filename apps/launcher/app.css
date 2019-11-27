@@ -1,0 +1,231 @@
+body
+{
+    -webkit-app-region: drag;
+}
+
+.window #botwEditor-mainWindow #main-sidebar-right
+{
+    background-image: none;
+    border: 2px solid #373b47;
+}
+
+#main-sidebar-right
+{
+    text-align: center;
+}
+
+.bg-gradient-green
+{
+    background: linear-gradient(to top, #45b634, #63cb53);  
+}
+
+.bg-gradient-blue
+{
+    background: linear-gradient(to top, #41a1e1, #3ad2d1);  
+}
+
+.bg-gradient-orange
+{
+    background: linear-gradient(to top, #e97d68, #e99b68);
+}
+.bg-gradient-purple
+{
+    background: linear-gradient(to top, #963c79, #b55f9c);
+}
+
+.open-app-groupContainer
+{
+    -webkit-app-region: no-drag;
+    position: relative;
+    top: calc(50% - 150px);
+    height: 300px;
+    display: inline-flex;
+}
+
+.open-app-mainDiv
+{
+    display: inline-block;
+    height: 100%;
+    font-family: open-sans;
+    -webkit-app-region: no-drag;
+}
+
+.open-app-mainDiv.field
+{
+    height: 300px;
+}
+
+.open-app-container
+{
+    height: 100%;
+    width: 250px;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.open-app-container-sidebar select
+{
+    border: none;
+}
+
+.open-app-mainDiv:first-child .open-app-container
+{
+    margin-left: 2px;
+}
+
+.window .button-open-app
+{
+    width: 100%;
+    height: calc(100% - 50px);
+    background-size: 100%;
+    cursor: pointer !important;
+}
+
+.open-app-container-sidebar,
+.open-app-groupContainer:hover .open-app-container-sidebar
+{
+    width: 0;
+}
+
+.open-app-mainDiv .default-open,
+.open-app-mainDiv:hover .open-app-container-sidebar
+{
+    width: 300px;
+}
+
+.open-app-container-sidebar
+{
+    transition: width ease-in-out 0.5s;
+    __transition: transform ease-in-out 0.5s, width ease-in-out 0.5s, margin ease-in-out 0.5s;
+
+    display: inline-block;
+    position: relative;
+    overflow-x: hidden;
+    color: white;
+    display: inline-block;
+    height: 100%;
+    vertical-align: top;
+}
+
+.open-app-container .icon-fieldEditor
+{
+    background-image: url("./../../assets/img/logos/field_editor_white.svg");
+}
+
+.open-app-container .icon-shrineEditor
+{
+    background-image: url("./../../assets/img/logos/shrine_editor_white.svg");
+}
+
+.open-app-container .icon-bfresEditor
+{
+    background-image: url("./../../assets/img/logos/bfres_editor_white.svg");
+}
+
+.open-app-container .icon-settings
+{
+    background-image: url("./../../assets/img/logos/settings_white.svg");
+}
+
+.open-app-mainDiv span.open-app-text
+{
+    display: inline-block;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 4px;
+    width: 100%;
+    /* text-shadow: 0px 0px 4px #636363; */
+    text-align: center;
+    font-size: 16pt;
+    padding: 8px 0 0 0;
+}
+
+.open-app-mainDiv .open-app-container-sidebar span.open-app-text
+{
+    font-size: 10pt;
+}
+
+.open-app-mainDiv select
+{
+    color: #41a2e1;
+    height: calc(100% - 50px);
+    margin-top: 5px;
+    width: 270px;
+    background-color: #282c34;
+}
+
+.open-app-mainDiv .bg-gradient-orange select
+{
+    color: #e2c08d;
+}
+
+.open-app-mainDiv input.form-control
+{
+    width: 270px;
+    height: 30px;
+    margin-top: 5px;
+}
+
+.open-app-mainDiv .settings-nav-container
+{
+    position: relative;
+    top: calc(50% - 70px);
+}
+
+.open-app-mainDiv.settings nav hr {
+    width: calc(100% - 40px);
+    margin: 8px 0 8px 20px;
+    opacity: 0.5;
+}
+
+.open-app-mainDiv .nav-group-item,
+.open-app-mainDiv .nav-group-item .icon,
+.open-app-mainDiv nav
+{
+    color: white;
+    __letter-spacing: 2pt;
+    font-size: 10pt;
+
+}
+.open-app-mainDiv .nav-group-item .icon
+{
+    padding-top: 2px;
+}
+
+.open-app-mainDiv .nav-group-item
+{
+    text-align: left;
+    padding: 4px 0 4px 20px;
+}
+
+.open-app-mainDiv .nav-group-item,
+.open-app-mainDiv .nav-group-item .icon
+{
+    cursor: pointer;
+}
+
+.open-app-mainDiv.settings nav .nav-group-item:hover,
+.open-app-mainDiv.settings nav .nav-group-item:hover .icon
+{
+    color: #963c79;
+    background-color: white;
+}
+
+.app-title-text
+{
+    color: #41a1e1;
+    text-transform: uppercase;
+    letter-spacing: 4pt;
+    font-size: 40pt;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.app-credit-text
+{
+    position: absolute;
+    bottom: 4px;
+    right: 8px;
+    color: #9a9a9a;
+}
+

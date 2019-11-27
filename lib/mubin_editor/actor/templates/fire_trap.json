@@ -1,0 +1,167 @@
+{
+    "name": "Trap - Fire",
+    "actors": [
+        {
+            "!Parameters": {
+                "DropTable": {
+                    "type": 160,
+                    "value": "Normal"
+                },
+                "SharpWeaponJudgeType": {
+                    "type": 209,
+                    "value": 0
+                }
+            },
+            "HashId": {
+                "type": 211,
+                "value": "{ID0}"
+            },
+            "LinksToObj": [
+                {
+                    "!Parameters": {
+                        "NoAutoDemoMember": {
+                            "type": 208,
+                            "value": false
+                        }
+                    },
+                    "DefinitionName": {
+                        "type": 160,
+                        "value": "BasicSig"
+                    },
+                    "DestUnitHashId": {
+                        "type": 211,
+                        "value": "{ID1}"
+                    }
+                }
+            ],
+            "OnlyOne": {
+                "type": 208,
+                "value": true
+            },
+            "SRTHash": {
+                "type": 209,
+                "value": -2031081508
+            },
+            "Translate": [
+                {
+                    "type": 210,
+                    "value": 0
+                },
+                {
+                    "type": 210,
+                    "value": 0
+                },
+                {
+                    "type": 210,
+                    "value": 0
+                }
+            ],
+            "UnitConfigName": {
+                "type": 160,
+                "value": "SwitchStepOnce"
+            }
+        },
+        {
+            "!Parameters": {
+                "IncrementSave": {
+                    "type": 208,
+                    "value": false
+                },
+                "MakeSaveFlag": {
+                    "type": 209,
+                    "value": 0
+                },
+                "NoChangeSignal": {
+                    "type": 208,
+                    "value": false
+                },
+                "SaveFlagOnOffType": {
+                    "type": 209,
+                    "value": 0
+                }
+            },
+            "HashId": {
+                "type": 211,
+                "value": "{ID1}"
+            },
+            "LinksToObj": [
+                {
+                    "!Parameters": {
+                        "NoAutoDemoMember": {
+                            "type": 208,
+                            "value": false
+                        }
+                    },
+                    "DefinitionName": {
+                        "type": 160,
+                        "value": "BasicSigOnOnly"
+                    },
+                    "DestUnitHashId": {
+                        "type": 211,
+                        "value": "{ID2}"
+                    }
+                }
+            ],
+            "SRTHash": {
+                "type": 209,
+                "value": -44730862
+            },
+            "Translate": [
+                {
+                    "type": 210,
+                    "value": 2
+                },
+                {
+                    "type": 210,
+                    "value": 1
+                },
+                {
+                    "type": 210,
+                    "value": 2
+                }
+            ],
+            "UnitConfigName": {
+                "type": 160,
+                "value": "LinkTagNAnd"
+            }
+        },
+        {
+            "!Parameters": {
+                "DropTable": {
+                    "type": 160,
+                    "value": "Normal"
+                },
+                "SharpWeaponJudgeType": {
+                    "type": 209,
+                    "value": 0
+                }
+            },
+            "HashId": {
+                "type": 211,
+                "value": "{ID2}"
+            },
+            "SRTHash": {
+                "type": 209,
+                "value": 31184044
+            },
+            "Translate": [
+                {
+                    "type": 210,
+                    "value": 0
+                },
+                {
+                    "type": 210,
+                    "value": -0.26
+                },
+                {
+                    "type": 210,
+                    "value": 0
+                }
+            ],
+            "UnitConfigName": {
+                "type": 160,
+                "value": "DgnObj_FirePillar"
+            }
+        }
+    ]
+}

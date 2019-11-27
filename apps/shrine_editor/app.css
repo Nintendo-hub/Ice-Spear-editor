@@ -1,0 +1,28 @@
+#main-sidebar-2
+{
+    overflow: hidden;
+}
+
+.window #main-sidebar-1 .tool-group button
+{
+    width: 90%;
+}
+
+.window canvas.shrine-canvas
+{
+    width: 100%;
+    height: 100%;
+}
+
+.window label
+{
+    color: #bbbbbb;
+    font-size: 11px;
+}
+
+.window label span
+{
+    margin-top: 1px;
+    margin-left: 3px;
+    float: right;
+}
