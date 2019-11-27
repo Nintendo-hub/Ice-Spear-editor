@@ -1,7 +1,7 @@
 # Ice-Spear-editor
 BOTW的神庙编辑器
 
-#源库
+# 源库
 源库在[gitlab]上，此库是将其迁移到GitHub上
 [gitlab]: http://gitlab.com/ice-spear-tools/ice-spear/
 
