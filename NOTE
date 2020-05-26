@@ -1,0 +1,32 @@
+解压缩asar文件。
+
+在asar文件所在的根目录执行asar extract app.asar ./指令
+asar extrct指令有两个参数
+    asar extract app.asar ./
+    第一个是需要解压缩的asar文件
+    第二个参数是解压缩之后文件存放的路径
+    “./”是指放在根目录。
+
+制作app.asar。
+
+将排除了node_modules的业务文件通过“asar pack ./ app.asar”指令压缩成app.asar。
+
+
+
+
+
+
+    app
+(a) ├── x1
+(b) ├── x2
+(c) ├── y3
+(d) │   ├── x1
+(e) │   └── z1
+(f) │       └── x2
+(g) └── z4
+(h)     └── w1
+
+
+asar pack app app.asar --unpack-dir "{x1,x2}"
+
+asar pack ./ app.asar --unpack-dir "{node_modules}"

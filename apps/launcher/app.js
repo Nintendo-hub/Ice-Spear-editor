@@ -86,14 +86,14 @@ module.exports = class App extends App_Base
         }
 
         const {value: projectName} = await swal({
-            title: "Select a project",
+            title: "选择一个项目",
             type: 'question',
             input: 'select',
             inputOptions: new Map(projectNames.map((name) => [name, name])),
             showCloseButton: true,
             showCancelButton: true,
-            cancelButtonText: 'Cancel',
-            confirmButtonText: 'Open',
+            cancelButtonText: '取消',
+            confirmButtonText: '打开',
         });
         
         if(projectName) 
@@ -112,13 +112,13 @@ module.exports = class App extends App_Base
     async createProject()
     {
         const {value: projectName} = await swal({
-            title: "What's your new project called?",
+            title: "给新项目取个名字",
             type: 'question',
             input: 'text',
             showCloseButton: true,
             showCancelButton: true,
-            cancelButtonText: 'Cancel',
-            confirmButtonText: 'Create',
+            cancelButtonText: '取消',
+            confirmButtonText: '创建',
         });
 
         if(projectName) 

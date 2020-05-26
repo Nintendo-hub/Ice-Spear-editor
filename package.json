@@ -7,42 +7,18 @@
   "bin": {
     "ice-spear": "./main.js"
   },
-  "scripts": {
-    "start": "electron . --js-flags=\"--expose-gc\"",
-    "update-license-csv": "license-checker --csv > MODULES_LICENSE.csv",
-    "test": "electron-mocha --recursive",
-    "pack": "electron-builder --dir",
-    "dist": "electron-builder",
-    "postinstall": "electron-builder install-app-deps"
-  },
   "repository": {
     "type": "git",
     "url": "gitlab:ice-spear-tools/ice-spear"
   },
   "ice-spear": {
-    "debug-mode": true,
+    "debug-mode": false,
     "default-app": "launcher",
     "app-icon": "assets/icons/icon_256.png",
     "default-size": [
       1500,
       820
     ]
-  },
-  "build": {
-    "appId": "ice-spear-tools.ice-spear",
-    "productName": "Ice-Spear",
-    "copyright": "©2019 Max Bebök",
-    "npmRebuild": true,
-    "win": {
-      "target": "7z"
-    }
-  },
-  "devDependencies": {
-    "chai": "^4.1.2",
-    "electron": "5.0.1",
-    "electron-builder": "^20.22.0",
-    "electron-mocha": "^5.0.0",
-    "mocha": "^5.0.4"
   },
   "dependencies": {
     "ace-builds": "^1.3.3",

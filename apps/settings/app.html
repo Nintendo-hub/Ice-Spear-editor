@@ -8,7 +8,7 @@
             @license GNU-GPLv3 - see the "LICENSE" file in the root directory
         -->
 
-    <title>Ice-Spear - Settings</title>
+    <title>Ice-Spear - 设置</title>
 
     <link rel="stylesheet" href="./app.css" />
 
@@ -35,36 +35,36 @@
 
                     <ul class="list-group">
                         <li class="list-group-header">
-                            <input class="form-control" type="text" placeholder="Filter...">
+                            <input class="form-control" type="text" placeholder="快速搜索...">
                         </li>
                         <li class="list-group-item active" data-tab="game">
                             <div class="media-body">
-                                <strong class="search-value">Game</strong>
-                                <p class="search-value">General Game/ROM settings</p>
+                                <strong class="search-value">游戏</strong>
+                                <p class="search-value">常规游戏/ROM设置</p>
                             </div>
                         </li>
                         <li class="list-group-item" data-tab="projects">
                             <div class="media-body">
-                                <strong class="search-value">Projects</strong>
-                                <p class="search-value">Project settings</p>
+                                <strong class="search-value">项目</strong>
+                                <p class="search-value">项目设置</p>
                             </div>
                         </li>
                         <li class="list-group-item" data-tab="mubin_editor">
                             <div class="media-body">
-                                <strong class="search-value">Editor (General)</strong>
-                                <p class="search-value">Field/Shrine-Editor settings</p>
+                                <strong class="search-value">编辑器 (一般)</strong>
+                                <p class="search-value">平原/神庙-编辑器设置</p>
                             </div>
                         </li>
                         <li class="list-group-item" data-tab="field_editor">
                             <div class="media-body">
-                                <strong class="search-value">Field-Editor</strong>
-                                <p class="search-value">Field-Editor settings</p>
+                                <strong class="search-value">平原编辑器</strong>
+                                <p class="search-value">平原编辑器设置</p>
                             </div>
                         </li>
                         <li class="list-group-item" data-tab="cache">
                             <div class="media-body">
-                                <strong class="search-value">Cache</strong>
-                                <p class="search-value">Project/Global Caching</p>
+                                <strong class="search-value">缓存</strong>
+                                <p class="search-value">项目/全局缓存</p>
                             </div>
                         </li>
                     </ul>
@@ -74,12 +74,12 @@
                     <div class="tab-content" data-tab="game">
 
                         <div class="form-group drag-drop-dir">
-                            <label>Game/ROM directory <span class="small-info-text">(restart needed to take effect)</span></label>
+                            <label>游戏/ROM 目录 <span class="small-info-text">(重启生效)</span></label>
                             <br/>
-                            <button class="btn btn-large btn-default">Select</button>
+                            <button class="btn btn-large btn-default">选择</button>
                             <input type="text" data-dataType="path" data-configRef="game.path" class="form-control" placeholder="Open or drag&drop a directory">
                             <span class="note-span">
-                                Note: <span class="small-info-text">Read-Only, the editor will NOT write anything to the original ROM data.</span>
+                                提示: <span class="small-info-text">只读, 编辑器不会向原始ROM数据写入任何内容.</span>
                             </span>
                         </div>
 
@@ -87,31 +87,31 @@
 
                     <div class="tab-content" data-tab="projects" hidden>
                         <div class="form-group drag-drop-dir">
-                            <label>Directory to put Projects in</label>
+                            <label>放置项目的目录</label>
                             <br/>
-                            <button class="btn btn-large btn-default">Select</button>
+                            <button class="btn btn-large btn-default">选择</button>
                             <input type="text" data-dataType="path" data-configRef="projects.path" class="form-control" placeholder="Open or drag&drop a directory">
                         </div>
                     </div>
 
                     <div class="tab-content" data-tab="mubin_editor" hidden>
-                        <h4>Controls</h4>
-                        <h5>Object-Selection</h5>
+                        <h4>控制项</h4>
+                        <h5>对象选择</h5>
                         <div class="settings-container">
                             <label>
                                 <input type="checkbox" data-autoSave="true" data-dataType="bool" data-configRef="mubinEditor.keys.selectRight" />
-                                <span>Select with right mouse-button</span>
+                                <span>用鼠标右键选择</span>
                             </label>
                             <br/>
 
                             <label>
                                 <input type="checkbox" data-autoSave="true" data-dataType="bool" data-configRef="mubinEditor.keys.selectMiddle" />
-                                <span>Select with middle mouse-click</span>
+                                <span>用鼠标中键选择</span>
                             </label>
                             <br/>
                             
                             <span class="note-span" style="margin-left:0;">
-                                Note: <span class="small-info-text">You can safely enable both</span>
+                                提示: <span class="small-info-text">你也可以两者都用</span>
                             </span>
                         </div>
                     </div>
@@ -120,12 +120,12 @@
                         <div class="settings-container">
                             <label>
                                 <input type="checkbox" data-autoSave="true" data-dataType="bool" data-configRef="fieldEditor.loadModel" />
-                                <span>Load Map-Model</span>
+                                <span>加载地图模型</span>
                             </label>
                             
                             <br/>
                             <span class="note-span" style="margin-left:0;">
-                                Note: <span class="small-info-text">Disabling this will result in faster loading times and less RAM usage,<br/>you will however have no map-model</span>
+                                提示: <span class="small-info-text">禁用此选项加载时间变快,可用内存减少,<br/>但不会显示地图模型</span>
                             </span>
                         </div>
                     </div>
@@ -135,30 +135,30 @@
                         <div class="settings-container">
                             <label>
                                 <input type="checkbox" data-autoSave="true" data-dataType="bool" data-configRef="cache.terrainTextures" />
-                                <span>Cache Terrain-Textures</span>
+                                <span>缓存地形纹理</span>
                             </label>
                             <br/>
                             <span class="note-span" style="margin-left:0;">
-                                Note: <span class="small-info-text">Enabling this is way faster, but creates a 249MB cache-file per project</span>
+                                提示: <span class="small-info-text">启用后加载速度更快,但是每个项目都会创建249MB的缓存文件(注意硬盘容量)</span>
                             </span>
                         </div>
                         <div class="settings-container">
                             <label>
                                 <input type="checkbox" data-autoSave="true" data-dataType="bool" data-configRef="cache.actors" />
-                                <span>Cache Actors (Models + Textures)</span>
+                                <span>缓存Actors (模型 + 纹理贴图)</span>
                             </label>
                             
                             <br/>
                             <span class="note-span" style="margin-left:0;">
-                                Note: <span class="small-info-text">This is waaaay faster, but creates gigabytes of cache-files over time</span>
+                                提示: <span class="small-info-text">这样做加载速度更快, 但是随着时间的推移会创建千兆字节的缓存文件</span>
                             </span>
                         </div>
                         <div class="settings-container">
                             <div class="container-fileSize">
-                                <span>Project Cache-Size: </span>
+                                <span>项目缓存大小: </span>
                                 <span class="data-info-projectCache"></span>
                             </div>
-                            <button class="btn btn btn-default data-tool-clearCache">Clear Cache</button>
+                            <button class="btn btn btn-default data-tool-clearCache">清空缓存</button>
                         </div>
                     </div>
                 </div>
